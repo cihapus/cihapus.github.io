@@ -9,7 +9,7 @@ console.log("sort files called....");
   if(studentfiles){
   console.log(studentfiles);
     
-    var geteachfile = student.querySelectorAll("tr");
+    var geteachfile = studentfiles.querySelectorAll("tr");
     
     if(geteachfile.length>0){
     
