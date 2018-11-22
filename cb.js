@@ -55,7 +55,7 @@ console.log("sort files called....");
         // if critiquenumber ==="Critique 1" then push to that array, if "Critique 2" push to that array etc
         //that should give three lists of files which can be downloaded to correct folders manually
         
-        console.log("allsubmissions== "+allsubmissions);
+       
         
         
       
@@ -63,6 +63,9 @@ console.log("sort files called....");
       
       
     }//if geteachfile
+    
+    
+     console.log(allsubmissions);
     
     
   }//if studentfiles
