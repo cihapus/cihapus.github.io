@@ -81,6 +81,8 @@ console.log("sort files called....");
 
 
 function showFiles(allsubmissions) {
+  
+  console.log("showfiles called");
 
 var newWindow = window.open("", null, "height=400,width=800,status=yes,toolbar=no,menubar=no,location=no");
  
