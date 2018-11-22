@@ -66,7 +66,7 @@ console.log("sort files called....");
     
     
      console.log(allsubmissions);
-    
+    showFiles(allsubmissions);
     
   }//if studentfiles
   else{
@@ -80,7 +80,7 @@ console.log("sort files called....");
 
 
 
-function showFiles() {
+function showFiles(allsubmissions) {
 
 var newWindow = window.open("", null, "height=400,width=800,status=yes,toolbar=no,menubar=no,location=no");
  
