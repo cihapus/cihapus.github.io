@@ -84,8 +84,29 @@ function showFiles(allsubmissions) {
   
   console.log("showfiles called...");
 
-  var myWindow = window.open("", "MsgWindow", "width=200,height=100");
-myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>"); 
+ // var myWindow = window.open("", "MsgWindow", "width=200,height=100");
+//myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>"); 
+  
+  var messagewindow = document.createElement("div");
+  
+  messagewindow.style.position = "absolute";
+messagewindow.style.top = "80px";
+messagewindow.style.left = "0px";
+messagewindow.style.margin = '20px';
+messagewindow.style.backgroundColor = "white"; 
+  messagewindow.style.color="black";
+  
+  
+  var newContent = document.createTextNode("Hi there and greetings!");
+  messagewindow.appendChild(newContent);  
+
+  
+  
+  
+  // add the newly created element and its content into the DOM 
+  var getbody = document.querySelector("body"); 
+  document.body.appendChild(messagewindow); 
+  
   
   
   
