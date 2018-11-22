@@ -23,7 +23,7 @@ console.log("sort files called....");
         
         var splitsubmission = eachfile.querySelectorAll("td");
         
-        var addressofeach = splitsubmission[0];
+        var addressofeach = splitsubmission[0].innerHTML;
         var nameofeach = splitsubmission[1].textContent;
         
         var critiquenumber = addressofeach.textContent;
