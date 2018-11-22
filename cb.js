@@ -93,11 +93,14 @@ function showFiles(allsubmissions) {
   messagewindow.style.zIndex = "9999";
   
    messagewindow.style.minHeight="400px";
+  messagewindow.style.minWidth="1000px";
   
   messagewindow.style.position = "fixed";
 messagewindow.style.top = "80px";
 messagewindow.style.left = "0px";
-messagewindow.style.margin = '20px';
+messagewindow.style.margin = "20px";
+  messagewindow.style.padding = "20px";
+  
 messagewindow.style.backgroundColor = "white"; 
   messagewindow.style.color="black";
   
