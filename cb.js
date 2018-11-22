@@ -23,10 +23,12 @@ console.log("sort files called....");
         
         var splitsubmission = eachfile.querySelectorAll("td");
         
-        var addressofeach = splitsubmission[0].innerHTML;
+        var addressofeach = splitsubmission[0].querySelector("a");
+        
+        
         var nameofeach = splitsubmission[1].textContent;
         
-        var critiquenumber = addressofeach.textContent;
+        var critiquenumber = splitsubmission[0].textContent;
         
         console.log(addressofeach, nameofeach, critiquenumber);
         
