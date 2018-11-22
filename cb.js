@@ -84,10 +84,15 @@ function showFiles(allsubmissions) {
   
   console.log("showfiles called");
 
-var newWindow = window.open("", null, "height=400,width=800,status=yes,toolbar=no,menubar=no,location=no");
+  var myWindow = window.open("", "MsgWindow", "width=200,height=100");
+myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>"); 
+  
+  
+  
+//newWindow = window.open("", null, "height=400,width=800,status=yes,toolbar=no,menubar=no,location=no");
  
-newWindow.document.write("<p>Submitted critiques:</p>");
- newWindow.document.write(allsubmissions);
+//newWindow.document.write("<p>Submitted critiques:</p>");
+ //newWindow.document.write(allsubmissions);
                           
 
 }
