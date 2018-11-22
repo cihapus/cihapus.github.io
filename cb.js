@@ -13,11 +13,27 @@ console.log("sort files called....");
     
     if(geteachfile.length>0){
     
+      console.log("Total number of submissions = "+geteachfile.length);
+      
+      
       for(let i=0;i<geteachfile.length;i++){
         
-        console.log(geteachfile[i]);
+        var eachfile = geteachfile[i];
+        console.log(eachfile);//each submission
+        
+        var splitsubmission = eachfile.querySelectorAll("td");
+        
+        var addressofeach = splitsubmission[0];
+        var nameofeach = splitsubmission[1].textContent;
+        
+        var critiquenumber = addressofeach.textContent;
+        
+        console.log(addressofeach, nameofeach, critiquenumber);
+        
+        
+        
       
-      }//forloop
+      }//i forloop - gets each submission
       
       
     }//if geteachfile
