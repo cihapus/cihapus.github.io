@@ -76,4 +76,29 @@ console.log("sort files called....");
 
 }//sortfiles
 
+
+
+
+
+function showFiles() {
+
+var newWindow = window.open("", null, "height=400,width=800,status=yes,toolbar=no,menubar=no,location=no");
+ 
+newWindow.document.write("<p>Submitted critiques:</p>");
+ newWindow.document.write(allsubmissions);
+                          
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 sortFiles();
