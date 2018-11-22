@@ -88,8 +88,13 @@ function showFiles(allsubmissions) {
 //myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>"); 
   
   var messagewindow = document.createElement("div");
+  messagewindow.id = "submissions";
   
-  messagewindow.style.position = "absolute";
+  messagewindow.style.zIndex = "9999";
+  
+   messagewindow.style.minHeight="400px";
+  
+  messagewindow.style.position = "fixed";
 messagewindow.style.top = "80px";
 messagewindow.style.left = "0px";
 messagewindow.style.margin = '20px';
