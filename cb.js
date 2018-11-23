@@ -159,7 +159,7 @@ messagewindow.style.backgroundColor = "white";
   var numberOfSubmissionsContent = document.createTextNode("Total submissions received: "+totalsubmissions);
   numsubmissions.appendChild(numberOfSubmissionsContent);
   
-  var submitters = document.createTextNode(submitterNames[0]);
+ 
  
   
   
@@ -167,7 +167,13 @@ messagewindow.style.backgroundColor = "white";
   messagewindow.appendChild(thiscourselink);  
  messagewindow.appendChild(numsubmissions);  
   
-  messagewindow.appendChild(submitters);
+  
+  for (var i=0; i<submitterNames.length;i++){
+   var submitters = document.createTextNode(submitterNames[i] + "(" + allsubmissions[i].length + ")");
+     messagewindow.appendChild(submitters);
+    
+  }
+ 
   
   
   
