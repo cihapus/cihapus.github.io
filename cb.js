@@ -183,10 +183,15 @@ messagewindow.style.backgroundColor = "white";
     
     for(let j=0;j<thesecritiques.length;j++){
     
-    var thiscritique = thesecritiques[j];
+    var thiscritiquer = thesecritiques[j].name;
+     var thiscritiquefile = thesecritiques[j].address;
       
-      console.log(thiscritique);
-    
+      var critiquerp = document.createElement("P");
+    critiquerp.appendChild(thiscritiquer);
+      critiquerp.appendChild(thiscritiquefile);
+      
+        submitterdiv.appendChild(critiquerp);
+      
     }
     
     /*
