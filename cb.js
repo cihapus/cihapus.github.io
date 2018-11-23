@@ -20,8 +20,20 @@ console.log("sort files called....");
   if(studentwork){
   var getuploads = studentwork.querySelectorAll('option[selected="selected"]');
     
-    console.log("getuploads is --");
-    console.log(getuploads);
+   // console.log("getuploads is --");
+   // console.log(getuploads);
+    
+    for (var i = 0; i < getuploads.length; i++) {
+      var thisnode = getuploads[i];
+      var exp1 = thisnode.textContent;
+      var exp2 = thisnode.value;
+      var exp3 = thisnode.innerHTML;
+      
+      console.log(exp1, exp2, exp3);
+      
+}
+    
+    
     
   }
   else{
