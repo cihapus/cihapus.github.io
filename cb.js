@@ -64,7 +64,10 @@ var thiscourselink = thisoriginalcourselink.cloneNode(true);
         
         var splitsubmission = eachfile.querySelectorAll("td");
         
-        var addressofeach = splitsubmission[0].querySelector("a");
+        var originaladdressofeach = splitsubmission[0].querySelector("a");
+        
+        var addressofeach = originaladdressofeach.cloneNode(true);
+        
         
         
         var nameofeach = splitsubmission[1].textContent;
@@ -185,6 +188,8 @@ messagewindow.style.backgroundColor = "white";
     
     var thiscritiquer = thesecritiques[j].name;
      var thiscritiquefile = thesecritiques[j].address;
+      
+      console.log("thiscritquer and file - "+thiscritiquer, thiscritiquefile);
       
       var critiquerp = document.createElement("P");
     critiquerp.appendChild(thiscritiquer);
