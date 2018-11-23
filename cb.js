@@ -12,6 +12,9 @@ function sortFiles(){
 console.log("sort files called....");
 
   var studentfiles = document.getElementById("report-results");
+   var thiscourselink = document.getElementById("sample-permalink");
+  
+  var thiscourse = thiscourselink.innerHTML;
   
   if(studentfiles){
   console.log(studentfiles);
@@ -67,7 +70,7 @@ console.log("sort files called....");
     
     
      console.log(allsubmissions);
-    showFiles(allsubmissions, totalsubmissions);
+    showFiles(allsubmissions, totalsubmissions, thiscourse);
     
   }//if studentfiles
   else{
@@ -81,7 +84,7 @@ console.log("sort files called....");
 
 
 
-function showFiles(allsubmissions, totalsubmissions) {
+function showFiles(allsubmissions, totalsubmissions, thiscourse) {
   
   console.log("showfiles called...");
 
@@ -107,10 +110,12 @@ messagewindow.style.backgroundColor = "white";
   
   
   var titleContent = document.createTextNode("Critique Submissions for ");
+  var courseLinkContent = thiscourse;
   var numberOfSubmissionsContent = document.createTextNode("Total submissions received: "+totalsubmissions);
   
   
   messagewindow.appendChild(titleContent);  
+  messagewindow.appendChild(courseLinkContent);  
  messagewindow.appendChild(numberOfSubmissionsContent);  
   
   
