@@ -150,7 +150,7 @@ messagewindow.style.backgroundColor = "white";
   
   
   
-  var title = document.createElement("H1")                // Create a <h1> element
+  var title = document.createElement("H2")                // Create a <h1> element
   var titleContent = document.createTextNode("Critique Submissions for ");
   title.appendChild(titleContent);
   
@@ -175,7 +175,7 @@ messagewindow.style.backgroundColor = "white";
     var submitterdiv = document.createElement("DIV");
     submitterdiv.id="critique-"+i;
     
-    var submitterp = document.createElement("P");
+    var submitterp = document.createElement("H3");
     
    var submitters = document.createTextNode(submitterNames[i] + "(" + allsubmissions[i].length + ")");
     submitterp.appendChild(submitters); 
@@ -189,10 +189,10 @@ messagewindow.style.backgroundColor = "white";
     var thiscritiquer = thesecritiques[j].name;
      var thiscritiquefile = thesecritiques[j].address;
       
-      console.log("thiscritquer and file - "+thiscritiquer, thiscritiquefile);
+      //console.log("thiscritquer and file - "+thiscritiquer, thiscritiquefile);
       
       var critiquerp = document.createElement("P");
-      var critname = document.createTextNode(thiscritiquer);
+      var critname = document.createTextNode(thiscritiquer+" : ");
     critiquerp.appendChild(critname);
       critiquerp.appendChild(thiscritiquefile);
       
