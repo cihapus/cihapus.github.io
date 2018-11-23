@@ -106,16 +106,18 @@ function showFiles(allsubmissions, totalsubmissions, thiscourselink) {
   
    messagewindow.style.minHeight="400px";
   messagewindow.style.minWidth="1000px";
+  messagewindow.style.maxHeight="600px";
+  
   
   messagewindow.style.position = "fixed";
-messagewindow.style.top = "80px";
+messagewindow.style.top = "20px";
 messagewindow.style.left = "0px";
 messagewindow.style.margin = "20px";
   messagewindow.style.padding = "20px";
   
 messagewindow.style.backgroundColor = "white"; 
   messagewindow.style.color="black";
-  
+  messagewindow.style.overflowY = "scroll";
   
   
   
@@ -161,6 +163,10 @@ messagewindow.style.backgroundColor = "white";
 function closeWindow(){
 
 console.log("close window");
+  
+  var subwindow = document.getElementById("submissions");
+   subwindow.parentNode.removeChild(subwindow);
+  
   
 }
 
