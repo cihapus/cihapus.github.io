@@ -86,7 +86,7 @@ console.log("sort files called....");
 
 function showFiles(allsubmissions, totalsubmissions, thiscourse) {
   
-  console.log("showfiles called...");
+  console.log("showfiles called....");
 
  // var myWindow = window.open("", "MsgWindow", "width=200,height=100");
 //myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>"); 
@@ -116,7 +116,7 @@ messagewindow.style.backgroundColor = "white";
   title.appendChild(titleContent);
   
  // var courselink = document.createElement("P");
-  var courseLinkContent = thiscourse;
+  //var courseLinkContent = thiscourse;
   //courselink.appendChild(courseLinkContent);
   
    var numsubmissions = document.createElement("P");
@@ -128,7 +128,7 @@ messagewindow.style.backgroundColor = "white";
   
   
   messagewindow.appendChild(title);  
-  messagewindow.appendChild(courseLinkContent);  
+  //messagewindow.appendChild(courseLinkContent);  
  messagewindow.appendChild(numsubmissions);  
   
   
