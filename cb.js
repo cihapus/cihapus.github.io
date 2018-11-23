@@ -158,7 +158,7 @@ messagewindow.style.backgroundColor = "white";
   //var courseLinkContent = thiscourse;
   //courselink.appendChild(courseLinkContent);
   
-   var numsubmissions = document.createElement("P");
+   var numsubmissions = document.createElement("H4");
   var numberOfSubmissionsContent = document.createTextNode("Total submissions received: "+totalsubmissions);
   numsubmissions.appendChild(numberOfSubmissionsContent);
   
@@ -192,7 +192,7 @@ messagewindow.style.backgroundColor = "white";
       //console.log("thiscritquer and file - "+thiscritiquer, thiscritiquefile);
       
       var critiquerp = document.createElement("P");
-      var critname = document.createTextNode(thiscritiquer+" : ");
+      var critname = document.createTextNode(thiscritiquer+"  :   ");
     critiquerp.appendChild(critname);
       critiquerp.appendChild(thiscritiquefile);
       
