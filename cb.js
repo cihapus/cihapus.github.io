@@ -177,7 +177,7 @@ messagewindow.style.backgroundColor = "white";
     
     var submitterp = document.createElement("H3");
     
-   var submitters = document.createTextNode(submitterNames[i] + "(" + allsubmissions[i].length + ")");
+   var submitters = document.createTextNode(submitterNames[i] + "  (" + allsubmissions[i].length + ")");
     submitterp.appendChild(submitters); 
      submitterdiv.appendChild(submitterp);
     
