@@ -23,7 +23,11 @@ console.log("sort files called....");
     console.log("getuploads is --");
     console.log(getuploads);
     
-  }//ifstudentwork
+  }
+  else{
+  console.log("no studentwork found");
+  }
+  //ifstudentwork
   
   
   
