@@ -12,9 +12,13 @@ function sortFiles(){
 console.log("sort files called....");
 
   var studentfiles = document.getElementById("report-results");
-   var thiscourselink = document.getElementById("sample-permalink");
+   var thisoriginalcourselink = document.getElementById("sample-permalink");
   
-  var thiscourse = thiscourselink.innerHTML;
+ 
+var thiscourselink = thisoriginalcourselink.cloneNode(true);
+  
+  
+  //var thiscourse = thiscourselink.innerHTML;
   
   if(studentfiles){
   console.log(studentfiles);
@@ -70,7 +74,7 @@ console.log("sort files called....");
     
     
      console.log(allsubmissions);
-    showFiles(allsubmissions, totalsubmissions, thiscourse);
+    showFiles(allsubmissions, totalsubmissions, thiscourselink);
     
   }//if studentfiles
   else{
@@ -84,7 +88,7 @@ console.log("sort files called....");
 
 
 
-function showFiles(allsubmissions, totalsubmissions, thiscourse) {
+function showFiles(allsubmissions, totalsubmissions, thiscourselink) {
   
   console.log("showfiles called....");
 
@@ -116,7 +120,7 @@ messagewindow.style.backgroundColor = "white";
   title.appendChild(titleContent);
   
  // var courselink = document.createElement("P");
-  var courseLinkContent = thiscourse;
+  //var courseLinkContent = thiscourse;
   //courselink.appendChild(courseLinkContent);
   
    var numsubmissions = document.createElement("P");
@@ -128,7 +132,7 @@ messagewindow.style.backgroundColor = "white";
   
   
   messagewindow.appendChild(title);  
-  messagewindow.appendChild(courseLinkContent);  
+  messagewindow.appendChild(thiscourselink);  
  messagewindow.appendChild(numsubmissions);  
   
   
