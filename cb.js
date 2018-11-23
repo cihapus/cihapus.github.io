@@ -115,11 +115,11 @@ messagewindow.style.backgroundColor = "white";
   var titleContent = document.createTextNode("Critique Submissions for ");
   title.appendChild(titleContent);
   
-  var courselink = document.createElement("p");
+  var courselink = document.createElement("P");
   var courseLinkContent = thiscourse;
   courselink.appendChild(courseLinkContent);
   
-   var numsubmissions = document.createElement("p");
+   var numsubmissions = document.createElement("P");
   var numberOfSubmissionsContent = document.createTextNode("Total submissions received: "+totalsubmissions);
   numsubmissions.appendChild(numberOfSubmissionsContent);
   
