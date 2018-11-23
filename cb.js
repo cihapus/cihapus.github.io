@@ -23,19 +23,16 @@ console.log("sort files called....");
    // console.log("getuploads is --");
    // console.log(getuploads);
     
+    var submitterNames = [];
+    
     for (var i = 0; i < getuploads.length; i++) {
       var thisnode = getuploads[i];
-      var exp1 = thisnode.textContent;
-      var exp2 = thisnode.value;
-      var exp3 = thisnode.innerHTML;
-      
-      console.log(exp1, exp2, exp3);
-      
-}
-    
-    
-    
-  }
+      var submitterNames[i] = thisnode.textContent;
+     // var exp2 = thisnode.value;
+      //var exp3 = thisnode.innerHTML;
+      //console.log(exp1, exp2, exp3);  
+}//forloop
+  }//ifstudentwork
   else{
   console.log("no studentwork found");
   }
@@ -103,7 +100,7 @@ var thiscourselink = thisoriginalcourselink.cloneNode(true);
     
     
      console.log(allsubmissions);
-    showFiles(allsubmissions, totalsubmissions, thiscourselink);
+    showFiles(allsubmissions, totalsubmissions, thiscourselink, submitterNames);
     
   }//if studentfiles
   else{
@@ -117,7 +114,7 @@ var thiscourselink = thisoriginalcourselink.cloneNode(true);
 
 
 
-function showFiles(allsubmissions, totalsubmissions, thiscourselink) {
+function showFiles(allsubmissions, totalsubmissions, thiscourselink, submitterNames) {
   
   console.log("showfiles called....");
 
@@ -162,13 +159,27 @@ messagewindow.style.backgroundColor = "white";
   var numberOfSubmissionsContent = document.createTextNode("Total submissions received: "+totalsubmissions);
   numsubmissions.appendChild(numberOfSubmissionsContent);
   
-  
+  var submitters = document.createTextNode(submitterNames[0]);
  
   
   
   messagewindow.appendChild(title);  
   messagewindow.appendChild(thiscourselink);  
  messagewindow.appendChild(numsubmissions);  
+  
+  messagewindow.appendChild(submitters);
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
     messagewindow.appendChild(messagewindowbutton);  
   
