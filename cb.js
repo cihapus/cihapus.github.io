@@ -192,7 +192,8 @@ messagewindow.style.backgroundColor = "white";
       console.log("thiscritquer and file - "+thiscritiquer, thiscritiquefile);
       
       var critiquerp = document.createElement("P");
-    critiquerp.appendChild(thiscritiquer);
+      var critname = document.createTextNode(thiscritiquer);
+    critiquerp.appendChild(critname);
       critiquerp.appendChild(thiscritiquefile);
       
         submitterdiv.appendChild(critiquerp);
