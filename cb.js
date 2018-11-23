@@ -95,8 +95,12 @@ function showFiles(allsubmissions, totalsubmissions, thiscourselink) {
  // var myWindow = window.open("", "MsgWindow", "width=200,height=100");
 //myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>"); 
   
-  var messagewindow = document.createElement("div");
+  var messagewindow = document.createElement("DIV");
   messagewindow.id = "submissions";
+  
+   var messagewindowbutton = document.createElement("BUTTON");
+  messagewindowbutton.id = "closemessagewindow";
+  messagewindowbutton.innerHTML = "close popup";
   
   messagewindow.style.zIndex = "9999";
   
@@ -135,14 +139,15 @@ messagewindow.style.backgroundColor = "white";
   messagewindow.appendChild(thiscourselink);  
  messagewindow.appendChild(numsubmissions);  
   
-  
+    messagewindow.appendChild(messagewindowbutton);  
   
   // add the newly created element and its content into the DOM 
   var getbody = document.querySelector("body"); 
   document.body.appendChild(messagewindow); 
   
   
-  
+  var addclosehandler = document.getElementById("closemessagewindow");
+  addclosehandler.addEventListener('click', closeWindow);
   
 //newWindow = window.open("", null, "height=400,width=800,status=yes,toolbar=no,menubar=no,location=no");
  
@@ -150,10 +155,14 @@ messagewindow.style.backgroundColor = "white";
  //newWindow.document.write(allsubmissions);
                           
 
+}//showfiles
+
+
+function closeWindow(){
+
+console.log("close window");
+  
 }
-
-
-
 
 
 
