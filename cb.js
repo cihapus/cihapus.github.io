@@ -168,9 +168,42 @@ messagewindow.style.backgroundColor = "white";
  messagewindow.appendChild(numsubmissions);  
   
   
-  for (var i=0; i<submitterNames.length;i++){
+  for (var i=0; i<submitterNames.length;i++){//loops through the three uploaders
+    var submitterdiv = document.createElement("DIV");
+    submitterdiv.id="critique-"+i;
+    
+    var submitterp = document.createElement("P");
+    
    var submitters = document.createTextNode(submitterNames[i] + "(" + allsubmissions[i].length + ")");
-     messagewindow.appendChild(submitters);
+    submitterp.appendChild(submitters); 
+     submitterdiv.appendChild(submitterp);
+    
+    
+    var thesecritiques = allsubmissions[i];
+    
+    for(let j=0;j<thesecritiques.length;j++){
+    
+    var thiscritique = thesecritiques[j];
+      
+      console.log(thiscritique);
+    
+    }
+    
+    /*
+    var critiquerp = document.createElement("P");
+    var critiquefrom = allsubmissions[i].name;
+    critiquerp.appendChild(critiquefrom);
+    
+    var critiqueaddress = allsubmissions[i].address;
+     submitterdiv.appendChild(critiquerp);
+    submitterdiv.appendChild(critiqueaddress);
+    */
+    
+    
+    
+    
+    
+    messagewindow.appendChild(submitterdiv);
     
   }
  
