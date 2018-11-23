@@ -20,7 +20,8 @@ console.log("sort files called....");
     
     if(geteachfile.length>0){
     
-      console.log("Total number of submissions = "+geteachfile.length);
+      var totalsubmissions = geteachfile.length;
+      console.log("Total number of submissions = "+totalsubmissions);
       
       
       for(let i=0;i<geteachfile.length;i++){
@@ -66,7 +67,7 @@ console.log("sort files called....");
     
     
      console.log(allsubmissions);
-    showFiles(allsubmissions);
+    showFiles(allsubmissions, totalsubmissions);
     
   }//if studentfiles
   else{
@@ -80,7 +81,7 @@ console.log("sort files called....");
 
 
 
-function showFiles(allsubmissions) {
+function showFiles(allsubmissions, totalsubmissions) {
   
   console.log("showfiles called...");
 
@@ -105,9 +106,12 @@ messagewindow.style.backgroundColor = "white";
   messagewindow.style.color="black";
   
   
-  var newContent = document.createTextNode("Hi there and greetings!");
-  messagewindow.appendChild(newContent);  
-
+  var titleContent = document.createTextNode("Critique Submissions for ");
+  var numberOfSubmissionsContent = document.createTextNode("Total submissions received: "+totalsubmissions);
+  
+  
+  messagewindow.appendChild(titleContent);  
+ messagewindow.appendChild(numberOfSubmissionsContent);  
   
   
   
