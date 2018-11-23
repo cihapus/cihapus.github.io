@@ -13,6 +13,19 @@ console.log("sort files called....");
 
   var studentfiles = document.getElementById("report-results");
    var thisoriginalcourselink = document.getElementById("sample-permalink");
+  var studentwork = document.getElementById("acf-critiques");//the work that is to be critiqued
+  
+  //extract student names from the uploaded files
+  
+  if(studentwork){
+  var getuploads = studentwork.querySelectorAll('option[selected="selected"]');
+    
+    console.log("getuploads is --");
+    console.log(getuploads);
+    
+  }//ifstudentwork
+  
+  
   
  
 var thiscourselink = thisoriginalcourselink.cloneNode(true);
