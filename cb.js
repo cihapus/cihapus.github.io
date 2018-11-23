@@ -116,7 +116,7 @@ messagewindow.style.backgroundColor = "white";
   title.appendChild(titleContent);
   
  // var courselink = document.createElement("P");
-  //var courseLinkContent = thiscourse;
+  var courseLinkContent = thiscourse;
   //courselink.appendChild(courseLinkContent);
   
    var numsubmissions = document.createElement("P");
@@ -128,7 +128,7 @@ messagewindow.style.backgroundColor = "white";
   
   
   messagewindow.appendChild(title);  
-  //messagewindow.appendChild(courseLinkContent);  
+  messagewindow.appendChild(courseLinkContent);  
  messagewindow.appendChild(numsubmissions);  
   
   
