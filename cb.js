@@ -109,14 +109,27 @@ messagewindow.style.backgroundColor = "white";
   messagewindow.style.color="black";
   
   
+  
+  
+  var title = document.createElement("H1")                // Create a <h1> element
   var titleContent = document.createTextNode("Critique Submissions for ");
+  title.appendChild(titleContent);
+  
+  var courselink = document.createElement("p");
   var courseLinkContent = thiscourse;
+  courselink.appendChild(courseLinkContent);
+  
+   var numsubmissions = document.createElement("p");
   var numberOfSubmissionsContent = document.createTextNode("Total submissions received: "+totalsubmissions);
+  numsubmissions.appendChild(numberOfSubmissionsContent);
   
   
-  messagewindow.appendChild(titleContent);  
-  messagewindow.appendChild(courseLinkContent);  
- messagewindow.appendChild(numberOfSubmissionsContent);  
+ 
+  
+  
+  messagewindow.appendChild(title);  
+  messagewindow.appendChild(courselink);  
+ messagewindow.appendChild(numsubmissions);  
   
   
   
