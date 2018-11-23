@@ -27,7 +27,7 @@ console.log("sort files called....");
     
     for (var i = 0; i < getuploads.length; i++) {
       var thisnode = getuploads[i];
-      var submitterNames[i] = thisnode.textContent;
+      submitterNames[i] = thisnode.textContent;
      // var exp2 = thisnode.value;
       //var exp3 = thisnode.innerHTML;
       //console.log(exp1, exp2, exp3);  
