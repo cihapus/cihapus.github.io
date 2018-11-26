@@ -7,8 +7,13 @@ function sortFiles(){
   allsubmissions[0]=[];
   allsubmissions[1]=[];
   allsubmissions[2]=[];
+   allsubmissions[3]=[];
+ allsubmissions[4]=[];
+   allsubmissions[5]=[];
   
-
+  
+  
+  
 console.log("sort files called....");
 
   var studentfiles = document.getElementById("report-results");
