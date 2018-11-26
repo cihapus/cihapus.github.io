@@ -216,7 +216,7 @@ messagewindow.style.backgroundColor = "white";
       var markduplicate="";
       for(let dup=0;dup<duplicates.length;dup++){
       if(duplicates[dup]==thiscritiquer){
-      var markduplicate = "*--"; 
+      var markduplicate = "* "; 
       }
       }
       
@@ -225,7 +225,11 @@ messagewindow.style.backgroundColor = "white";
       var critiquerp = document.createElement("P");
       var critname = document.createTextNode(markduplicate+thiscritiquer+"  :   ");
       
-      
+      if(markduplicate !=""){
+     
+        critiquerp.style.color="blue";
+        
+      }
       
       
       
