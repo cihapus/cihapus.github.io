@@ -14,7 +14,7 @@ function sortFiles(){
   
   
   
-console.log("sort files called....");
+console.log("sort files called");
 
   var studentfiles = document.getElementById("report-results");
    var thisoriginalcourselink = document.getElementById("sample-permalink");
