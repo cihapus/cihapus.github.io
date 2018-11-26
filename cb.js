@@ -198,15 +198,37 @@ messagewindow.style.backgroundColor = "white";
     
     var thesecritiques = allsubmissions[i];
     
-    for(let j=0;j<thesecritiques.length;j++){
+    var duplicates = [];
     
+    for(let j=0;j<thesecritiques.length;j++){
+      
+      duplicates[j]=[];//hold the name of any submitter for this work
+    
+      
     var thiscritiquer = thesecritiques[j].name;
      var thiscritiquefile = thesecritiques[j].address;
       
       //console.log("thiscritquer and file - "+thiscritiquer, thiscritiquefile);
       
+      
+      //check critname for duplicates
+      
+      var markduplicate="";
+      for(let dup=0;dup<duplicates.length;dup++){
+      if(duplicates[dup]==thiscritiquer){
+      var markduplicate = "*--"; 
+      }
+      }
+      
+      duplicates[j] = thiscritiquer;
+      
       var critiquerp = document.createElement("P");
-      var critname = document.createTextNode(thiscritiquer+"  :   ");
+      var critname = document.createTextNode(markduplicate+thiscritiquer+"  :   ");
+      
+      
+      
+      
+      
     critiquerp.appendChild(critname);
       critiquerp.appendChild(thiscritiquefile);
       
