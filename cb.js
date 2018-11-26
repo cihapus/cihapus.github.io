@@ -87,6 +87,15 @@ var thiscourselink = thisoriginalcourselink.cloneNode(true);
           else if(critiquenumber=="Critique 3"){
          allsubmissions[2].push(thissubmission);
         }
+         else if(critiquenumber=="Critique 4"){
+         allsubmissions[3].push(thissubmission);
+        }
+         else if(critiquenumber=="Critique 5"){
+         allsubmissions[4].push(thissubmission);
+        }
+         else if(critiquenumber=="Critique 6"){
+         allsubmissions[5].push(thissubmission);
+        }
         
         //works -- gives number of files and breaks them up into clickable links with student name and critique number
         // if critiquenumber ==="Critique 1" then push to that array, if "Critique 2" push to that array etc
