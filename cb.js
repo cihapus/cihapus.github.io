@@ -5,7 +5,7 @@ function sortFiles(){
   
   var css = document.createElement("style");
   css.type = "text/css";
-  css.innerHTML = "#submissions a { color: blue } #submissions a:active{color:red}  #submissions a:visited{color: #eee}";
+  css.innerHTML = "#submissions a { color: blue } #submissions a:active{color:red}  #submissions a:visited{color: #ddd} #submissions a:focus { color: #ddd }";
   document.head.appendChild(css);
   
   
