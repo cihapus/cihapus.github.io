@@ -208,6 +208,12 @@ messagewindow.style.backgroundColor = "white";
     var thiscritiquer = thesecritiques[j].name;
      var thiscritiquefile = thesecritiques[j].address;
       
+      
+       thiscritiquefile.style.color="#000044";
+      
+      
+      
+      
       //console.log("thiscritquer and file - "+thiscritiquer, thiscritiquefile);
       
       
