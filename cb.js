@@ -2,6 +2,16 @@
 
 function sortFiles(){
   
+  
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = "#submissions a:active { color: red, border:1px solid #000 }";
+  document.head.appendChild(css);
+  
+  
+  
+  
+  
   var allsubmissions =[];
   
   allsubmissions[0]=[];
@@ -209,7 +219,7 @@ messagewindow.style.backgroundColor = "white";
      var thiscritiquefile = thesecritiques[j].address;
       
       
-       thiscritiquefile.style.color="#000044";
+       thiscritiquefile.style.color="#00008B";
       
       
       
