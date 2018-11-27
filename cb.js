@@ -5,7 +5,7 @@ function sortFiles(){
   
   var css = document.createElement("style");
   css.type = "text/css";
-  css.innerHTML = "#submissions a:active { color: red }";
+  css.innerHTML = "#submissions a { color: blue }; #submissions a:active{color:red};  #submissions a:visited{color: #eee};";
   document.head.appendChild(css);
   
   
@@ -219,7 +219,7 @@ messagewindow.style.backgroundColor = "white";
      var thiscritiquefile = thesecritiques[j].address;
       
       
-       thiscritiquefile.style.color="#00008B";
+       //thiscritiquefile.style.color="#00008B";
       
       
       
