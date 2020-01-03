@@ -13,8 +13,32 @@ function initMeta(){
   
   
   
+  
+  
+  
+  
+  
   var messagewindow = document.createElement("DIV");
-  messagewindow.id = "submissions";
+  messagewindow.id = "submitmeta";
+  
+  
+  //
+  
+  var messagewindowfilereader = document.createElement("INPUT");
+  messagewindowfilereader.id="files";
+  messagewindowfilereader.name="files[]";
+   messagewindowfilereader.type="file";
+  
+    var messagewindowoutput = document.createElement("DIV");
+  messagewindowoutput.id = "list";
+  
+  
+  
+  
+  
+  
+  
+  //
   
    var messagewindowbutton = document.createElement("BUTTON");
   messagewindowbutton.id = "closemessagewindow";
@@ -40,11 +64,15 @@ messagewindow.style.backgroundColor = "white";
   
   
   var title = document.createElement("H2")               
-  var titleContent = document.createTextNode("Critique Submissions for ");
+  var titleContent = document.createTextNode("Submit metadata for ");
   title.appendChild(titleContent);
   
   messagewindow.appendChild(title);  
 
+  
+  messagewindow.appendChild(messagewindowfilereader);  
+  messagewindow.appendChild(messagewindowoutput);  
+  
  messagewindow.appendChild(messagewindowbutton);  
   
  
@@ -59,7 +87,7 @@ function closeWindow(){
 
 console.log("close window");
   
-  var subwindow = document.getElementById("submissions");
+  var subwindow = document.getElementById("submitmeta");
    subwindow.parentNode.removeChild(subwindow);
   
   
