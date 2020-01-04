@@ -36,7 +36,10 @@ function initMeta(){
   var messagewindowdropzone = document.createElement("DIV");
   messagewindowdropzone.id = "drop_zone";
    messagewindowdropzone.innerHTML = "Drop file here";
-  
+  messagewindowdropzone.style.margin = "20px";
+  messagewindowdropzone.style.padding = "30px";
+  messagewindowdropzone.style.border = "2px dashed #bbb";
+  messagewindowdropzone.style.textAlign = "center";
   
   
   
