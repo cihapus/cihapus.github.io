@@ -1,3 +1,9 @@
+
+import Compressor from 'compressorjs';
+
+
+
+
 function initMeta(){
 
   console.log("working...");
