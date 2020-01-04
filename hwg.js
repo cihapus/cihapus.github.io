@@ -80,6 +80,49 @@ messagewindow.style.backgroundColor = "white";
   document.body.appendChild(messagewindow); 
   
   
+  
+  
+  
+  
+  
+  
+  
+  //after messagewindow has been built, add handlers
+  
+  
+  
+  //filehandler
+   function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+    }
+    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }//handleFileSelect
+  
+  
+  
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  //close message window handler
+  
   var addclosehandler = document.getElementById("closemessagewindow");
   addclosehandler.addEventListener('click', closeWindow);
 
@@ -91,7 +134,7 @@ console.log("close window");
    subwindow.parentNode.removeChild(subwindow);
   
   
-}
+}//close window
 
 
 
