@@ -142,11 +142,35 @@ messagewindow.style.backgroundColor = "white";
                   f.size, ' bytes, last modified: ',
                   f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
                   '</li>');
+      handleCompress(files[i]);
+      
     }
     document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   }//handleFileSelect
   
+  function handleCompress(file){
   
+  new Compressor(file, {
+    quality: 0.6,
+    success(result) {
+      const formData = new FormData();
+console.log("compress success");
+      // The third parameter is required for server
+      //formData.append('file', result, result.name);
+
+      // Send the compressed image file to server with XMLHttpRequest.
+      //axios.post('/path/to/upload', formData).then(() => {
+       // console.log('Upload success');
+     // });
+    },
+    error(err) {
+      console.log(err.message);
+    },
+  });
+    
+    
+  
+  }//handlecompress
   
 
  // document.getElementById('files').addEventListener('change', handleFileSelect, false);
