@@ -169,9 +169,18 @@ messagewindow.style.backgroundColor = "white";
                   f.size, ' bytes, last modified: ',
                   f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
                   '</li>');
+      
+      
+      
+      var thisfilename = f.name;
+      var thisurl = window.location.href;
+      var thisfiledate =  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a';
+      
+      console.log("info: "+thisfilename, thisurl, thisfiledate);
+      
       handleCompress(files[i]);
       
-    }
+    }//for loop to look through files
     document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   }//handleFileSelect
   
