@@ -163,7 +163,8 @@ messagewindow.style.backgroundColor = "white";
     quality: 0.6,
     success(result) {
       const formData = new FormData();
-console.log("compress success");
+console.log("compress success, result and name: " +result+"=="+result.name);
+   //   console.log("file== "+file);
       // The third parameter is required for server
       //formData.append('file', result, result.name);
 
