@@ -99,13 +99,36 @@ messagewindow.style.backgroundColor = "white";
   //after messagewindow has been built, add handlers
   
   
+  //handle direct click
+  function handleFileClick(evt){
+  
+  var files = evt.target.files;
+    handleFileSelect(files);
+  }
+  
+  
+   function handleFileDrop(evt){
+  
+ evt.stopPropagation();
+    evt.preventDefault();
+
+    var files = evt.dataTransfer.files;
+    handleFileSelect(files);
+  }
+  
+  
+  
+  
   
   //filehandler
-   function handleFileSelect(evt) {
+   //function handleFileSelect(evt) {
+      function handleFileSelect(files) {
      
-     console.log("handle file select called");
-    var files = evt.target.files; // FileList object
+     //console.log("handle file select called");
+    //var files = evt.target.files; // FileList object
 
+     
+     
     // files is a FileList of File objects. List some properties.
     var output = [];
     for (var i = 0, f; f = files[i]; i++) {
@@ -120,8 +143,9 @@ messagewindow.style.backgroundColor = "white";
   
   
 
-  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+ // document.getElementById('files').addEventListener('change', handleFileSelect, false);
   
+   document.getElementById('files').addEventListener('change', handleFileClick, false);
   
   
   
@@ -129,18 +153,21 @@ messagewindow.style.backgroundColor = "white";
   //drop zone handler
   
   function handleDragOver(evt) {
-    console.log("dragover")
+    //console.log("dragover")
     evt.stopPropagation();
     evt.preventDefault();
     evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
   }
 
+  
+  
+  
   // Setup the dnd listeners.
   var dropZone = document.getElementById('dropzone');
   dropZone.addEventListener('dragover', handleDragOver, false);
-  dropZone.addEventListener('drop', handleFileSelect, false);
+//  dropZone.addEventListener('drop', handleFileSelect, false);
   
-  
+    dropZone.addEventListener('drop', handleFileDrop, false);
   
   
   
