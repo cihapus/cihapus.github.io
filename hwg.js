@@ -139,9 +139,22 @@ messagewindow.style.backgroundColor = "white";
    //function handleFileSelect(evt) {
       function handleFileSelect(files) {
      
-     //console.log("handle file select called");
-    //var files = evt.target.files; // FileList object
+    
+        /*once file uploaded we present a new menu of input boxes for meta data:
+        filename: should be files[i].name
+        url of download: auto-fill with current url
+        license: cc0 etc - drop-down menu or checkbox of common licenses
+        credit: @bobfish etc, defaults to 'none', need name box and url box
+        timecreated: should be files[i].lastModifiedDate.toLocaleDateString() 
+        
+        then tags for ordering/searching/linking - json array
 
+        then checkbox for 'make a compressed copy for mobile?' with checkbox ticked
+        
+        the program will then create a file with [filename]__[url encoded properly]__[license]__[credit]__[timecreated]
+        and a second file with all of that except "--compressed" at the end
+        plus a json file with this as metadata with array of tags - use same filename just different extension, json v img etc
+        */
      
      
     // files is a FileList of File objects. List some properties.
@@ -156,6 +169,12 @@ messagewindow.style.backgroundColor = "white";
     }
     document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   }//handleFileSelect
+  
+  
+  
+  
+  //checkbox will indicate whether to create compressed version, and perhaps slider for quality with default = 0.7
+  
   
   function handleCompress(file){
   
