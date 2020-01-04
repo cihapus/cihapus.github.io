@@ -33,7 +33,9 @@ function initMeta(){
   messagewindowoutput.id = "list";
   
   
-  
+  var messagewindowdropzone = document.createElement("DIV");
+  messagewindowdropzone.id = "drop_zone";
+   messagewindowdropzone.innerHTML = "Drop file here";
   
   
   
@@ -71,6 +73,10 @@ messagewindow.style.backgroundColor = "white";
 
   
   messagewindow.appendChild(messagewindowfilereader);  
+   messagewindow.appendChild(messagewindowdropzone);  
+  
+  
+  
   messagewindow.appendChild(messagewindowoutput);  
   
  messagewindow.appendChild(messagewindowbutton);  
@@ -114,6 +120,19 @@ messagewindow.style.backgroundColor = "white";
   
   
   
+  
+  //drop zone handler
+  
+  function handleDragOver(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+  }
+
+  // Setup the dnd listeners.
+  var dropZone = document.getElementById('drop_zone');
+  dropZone.addEventListener('dragover', handleDragOver, false);
+  dropZone.addEventListener('drop', handleFileSelect, false);
   
   
   
