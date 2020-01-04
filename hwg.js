@@ -146,10 +146,15 @@ messagewindow.style.backgroundColor = "white";
         license: cc0 etc - drop-down menu or checkbox of common licenses
         credit: @bobfish etc, defaults to 'none', need name box and url box
         timecreated: should be files[i].lastModifiedDate.toLocaleDateString() 
+        timeperiod of image: day/month/year -- optional
+        language: en or cy or other
         
-        then tags for ordering/searching/linking - json array
+        
+        then tags for ordering/searching/linking - json array, one tag per line?
+        then notes/description
 
-        then checkbox for 'make a compressed copy for mobile?' with checkbox ticked
+        then checkbox for 'make a compressed copy for web/mobile?' with checkbox ticked
+        maybe a resize option if image is over a certain size? with tag --small at end?
         
         the program will then create a file with [filename]__[url encoded properly]__[license]__[credit]__[timecreated]
         and a second file with all of that except "--compressed" at the end
