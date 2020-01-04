@@ -34,7 +34,7 @@ function initMeta(){
   
   
   var messagewindowdropzone = document.createElement("DIV");
-  messagewindowdropzone.id = "drop_zone";
+  messagewindowdropzone.id = "dropzone";
    messagewindowdropzone.innerHTML = "Drop file here";
   messagewindowdropzone.style.margin = "20px";
   messagewindowdropzone.style.padding = "30px";
@@ -74,9 +74,9 @@ messagewindow.style.backgroundColor = "white";
   
   messagewindow.appendChild(title);  
 
-  
-  messagewindow.appendChild(messagewindowfilereader);  
    messagewindow.appendChild(messagewindowdropzone);  
+  messagewindow.appendChild(messagewindowfilereader);  
+  
   
   
   
@@ -102,6 +102,8 @@ messagewindow.style.backgroundColor = "white";
   
   //filehandler
    function handleFileSelect(evt) {
+     
+     console.log("handle file select called");
     var files = evt.target.files; // FileList object
 
     // files is a FileList of File objects. List some properties.
@@ -127,13 +129,14 @@ messagewindow.style.backgroundColor = "white";
   //drop zone handler
   
   function handleDragOver(evt) {
+    console.log("dragover")
     evt.stopPropagation();
     evt.preventDefault();
     evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
   }
 
   // Setup the dnd listeners.
-  var dropZone = document.getElementById('drop_zone');
+  var dropZone = document.getElementById('dropzone');
   dropZone.addEventListener('dragover', handleDragOver, false);
   dropZone.addEventListener('drop', handleFileSelect, false);
   
