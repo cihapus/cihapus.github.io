@@ -67,7 +67,7 @@ function initMeta(){
   
   messagewindowbutton.style.position = "absolute";
   messagewindowbutton.style.bottom = "10px";
-  messagewindowbutton.style.right = "10px";
+  messagewindowbutton.style.left = "10px";
   messagewindowbutton.style.padding = "10px";
     messagewindowbutton.style.border = "0px";
      messagewindowbutton.style.background = "#333";
@@ -210,9 +210,10 @@ messagewindow.style.backgroundColor = "white";
         metadiv.id = "metadiv";
         
          var inputfilenamelabel = document.createElement("LABEL");
+        inputfilenamelabel.class="inputlab";
        inputfilenamelabel.setAttribute("for", "filename");
         
-         var labeltext = document.createTextNode("Filename: "); 
+         var labeltext = document.createTextNode("Filename:"); 
         inputfilenamelabel.appendChild(labeltext);
         
         
@@ -284,7 +285,14 @@ console.log("compress success, result and name: " +result+"=="+result.name);
   
    document.getElementById('files').addEventListener('change', handleFileClick, false);
   
+  var styleinputs = document.querySelectorAll('.inputlab');
   
+  for(let i=0; i<styleinputs.length; i++){
+  
+  styleinputs[i].style.padding = "20px";
+    styleinputs[i].color = "#333";
+    
+  }
   
   
   //drop zone handler
