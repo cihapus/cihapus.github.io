@@ -277,6 +277,57 @@ messagewindow.style.backgroundColor = "white";
         urldiv.appendChild(inputurl);
         
         
+         //licence input
+        
+           var licencediv = document.createElement("DIV");
+        licencediv.id = "licencediv";
+        
+        
+         var licencelabel = document.createElement("LABEL");
+        licencelabel.className="inputlab";
+       licencelabel.setAttribute("for", "licenceinput");
+        
+         var licencelabeltext = document.createTextNode("Copyright licence:"); 
+        licencelabel.appendChild(licencelabeltext);
+        
+        
+   var cc0 = document.createElement("INPUT");
+  cc0.id="cc0";
+  cc0.name="licenceinput";
+  cc0.type="radio";
+  //inputurl.value=thisurl;
+  cc0.className = "radioinputbox";
+ 
+        var cc0text = document.createTextNode("CC0 / Public Domain"); 
+        cc0.appendChild(cc0text);
+        
+        
+        
+        
+        var ccby4 = document.createElement("INPUT");
+  ccby4.id="ccby4";
+  ccby4.name="licenceinput";
+  ccby4.type="radio";
+  //inputurl.value=thisurl;
+  ccby4.className = "radioinputbox";
+        
+        
+ 
+        var ccby4text = document.createTextNode("CC BY 4.0"); 
+        ccby4.appendChild(ccby4text);
+        
+        
+        
+          licencediv.appendChild(licencelabel);
+        
+        licencediv.appendChild(cc0);
+          licencediv.appendChild(ccby4);
+        
+        
+        
+        
+        
+        
         
         
         
