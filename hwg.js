@@ -72,6 +72,8 @@ function initMeta(){
     messagewindowbutton.style.border = "0px";
      messagewindowbutton.style.background = "#333";
      messagewindowbutton.style.color = "#fff";
+
+  
   
   messagewindow.style.zIndex = "9999";
   
@@ -89,7 +91,9 @@ messagewindow.style.margin = "20px";
 messagewindow.style.backgroundColor = "white"; 
   messagewindow.style.color="black";
   messagewindow.style.overflowY = "scroll";
+  messagewindow.style.border="1px solid #333";
   
+  messagewindow.style.boxShadow="10px 10px 10px #333" 
   
   
   
@@ -263,7 +267,7 @@ messagewindow.style.backgroundColor = "white";
   inputurl.id="urlinput";
   inputurl.name="urlinput";
   inputurl.type="text";
-  inputurl.value=f.name;
+  inputurl.value=thisurl;
   inputurl.className = "metainputbox";
  
        
