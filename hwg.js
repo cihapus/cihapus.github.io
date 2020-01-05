@@ -298,8 +298,14 @@ messagewindow.style.backgroundColor = "white";
   //inputurl.value=thisurl;
   cc0.className = "radioinputbox";
  
-        var cc0text = document.createTextNode("CC0 / Public Domain"); 
-        cc0.appendChild(cc0text);
+        
+        cc0.innerHTML += "<span>CC0</span>";
+        
+        
+        
+        
+      //  var cc0text = document.createTextNode("CC0 / Public Domain"); 
+       // cc0.appendChild(cc0text);
         
         
         
@@ -312,9 +318,10 @@ messagewindow.style.backgroundColor = "white";
   ccby4.className = "radioinputbox";
         
         
- 
-        var ccby4text = document.createTextNode("CC BY 4.0"); 
-        ccby4.appendChild(ccby4text);
+ ccby4.innerHTML += "<span>CC BY 4.0</span>";
+        
+      //  var ccby4text = document.createTextNode("CC BY 4.0"); 
+      //  ccby4.appendChild(ccby4text);
         
         
         
