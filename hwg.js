@@ -65,7 +65,7 @@ function initMeta(){
   messagewindowbutton.innerHTML = "close popup";
   
   
-  messagewindowbutton.style.position = "fixed";
+  messagewindowbutton.style.position = "absolute";
   messagewindowbutton.style.bottom = "10px";
   messagewindowbutton.style.right = "10px";
   messagewindowbutton.style.padding = "10px";
@@ -210,9 +210,11 @@ messagewindow.style.backgroundColor = "white";
         metadiv.id = "metadiv";
         
          var inputfilenamelabel = document.createElement("LABEL");
-        inputfilenamelabel.text = "Filename: ";
        inputfilenamelabel.setAttribute("for", "filename");
-         
+        
+         var labeltext = document.createTextNode("Filename: "); 
+        inputfilenamelabel.appendChild(labeltext);
+        
         
    var inputfilename = document.createElement("INPUT");
   inputfilename.id="filename";
