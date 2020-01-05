@@ -162,9 +162,24 @@ messagewindow.style.backgroundColor = "white";
         */
      
      
+        //first get rid of the file submit boxes
+        
+        var getDropZone = document.getElementById("dropzone");
+          var getFileSubmitBtn = document.getElementById("files");
+        
+        if(!getDropZone || !getFileSubmitBtn){
+        console.warn("no dropzone/file submit to remove");
+        }
+        else{
+        getDropZone.style.display = "none";
+        getFileSubmitBtn.style.display = "none";
+        }
+        
+        
     // files is a FileList of File objects. List some properties.
+        var f = files[0];//just deal with a single file submit
     var output = [];
-    for (var i = 0, f; f = files[i]; i++) {
+    //for (var i = 0, f; f = files[i]; i++) {
       output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
                   f.size, ' bytes, last modified: ',
                   f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
@@ -178,9 +193,14 @@ messagewindow.style.backgroundColor = "white";
       
       console.log("info: "+thisfilename, thisurl, thisfiledate);
       
-      handleCompress(files[i]);
+        
+        //call this if compress files box is checked... 
+        handleCompress(f);
+      //handleCompress(files[i]);
       
-    }//for loop to look through files
+        
+        
+    //}//for loop to look through files
     document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   }//handleFileSelect
   
