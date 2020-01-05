@@ -198,6 +198,10 @@ messagewindow.style.backgroundColor = "white";
         var metadiv = document.createElement("DIV");
         metadiv.id = "metadiv";
         
+         var inputfilenamelabel = document.createElement("LABEL");
+        inputfilenamelabel.text = "Filename: ";
+       inputfilenamelabel.setAttribute("for", "filename");
+         
         
    var inputfilename = document.createElement("INPUT");
   inputfilename.id="filename";
@@ -206,6 +210,8 @@ messagewindow.style.backgroundColor = "white";
   inputfilename.value=f.name;
         
         //add the inputs to the div
+        metadiv.appendChild(inputfilenamelabel);
+        
         metadiv.appendChild(inputfilename);
         
         //add the div to the messagewindow
