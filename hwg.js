@@ -216,8 +216,8 @@ messagewindow.style.backgroundColor = "white";
         
         
         //build the metadata input fields...
-        var metadiv = document.createElement("DIV");
-        metadiv.id = "metadiv";
+        var filenamediv = document.createElement("DIV");
+        filenamediv.id = "filenamediv";
         
         
         //filename input
@@ -236,13 +236,26 @@ messagewindow.style.backgroundColor = "white";
   inputfilename.value=f.name;
   inputfilename.className = "metainputbox";
         
+         //add the inputs to the div
+        filenamediv.appendChild(inputfilenamelabel);
+        
+        filenamediv.appendChild(inputfilename);
+        
+        
+        
+        
         
         //url input
+        
+           var urldiv = document.createElement("DIV");
+        urldiv.id = "urldiv";
+        
+        
          var urllabel = document.createElement("LABEL");
         urllabel.className="inputlab";
        urllabel.setAttribute("for", "urlinput");
         
-         var urllabeltext = document.createTextNode("Dowloaded from:"); 
+         var urllabeltext = document.createTextNode("Downloaded from:"); 
         urllabel.appendChild(urllabeltext);
         
         
@@ -252,30 +265,21 @@ messagewindow.style.backgroundColor = "white";
   inputurl.type="text";
   inputurl.value=f.name;
   inputurl.className = "metainputbox";
+ 
+       
+        
+          urldiv.appendChild(urllabel);
+        
+        urldiv.appendChild(inputurl);
         
         
         
         
         
-        
-        
-        
-        //add the inputs to the div
-        metadiv.appendChild(inputfilenamelabel);
-        
-        metadiv.appendChild(inputfilename);
-        
-          metadiv.appendChild(urllabel);
-        
-        metadiv.appendChild(inputurl);
-        
-        
-        
-        
-        
-        //add the div to the messagewindow
+        //add the divs to the messagewindow
         var getMsgWindow = document.getElementById("submitmeta");
-        getMsgWindow.appendChild(metadiv);
+        getMsgWindow.appendChild(filenamediv);
+           getMsgWindow.appendChild(urldiv);
         
         
         
