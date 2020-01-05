@@ -194,6 +194,31 @@ messagewindow.style.backgroundColor = "white";
       console.log("info: "+thisfilename, thisurl, thisfiledate);
       
         
+        //build the metadata input fields...
+        var metadiv = document.createElement("DIV");
+        metadiv.id = "metadiv";
+        
+        
+   var inputfilename = document.createElement("INPUT");
+  inputfilename.id="filename";
+  inputfilename.name="filename";
+  inputfilename.type="text";
+  inputfilename.value=f.name;
+        
+        //add the inputs to the div
+        metadiv.appendChild(inputfilename);
+        
+        //add the div to the messagewindow
+        var getMsgWindow = document.getElementById("submitmeta");
+        getMsgWindow.appendChild(metadiv);
+        
+        
+        
+        
+        
+        
+        
+        
         //call this if compress files box is checked... 
         handleCompress(f);
       //handleCompress(files[i]);
