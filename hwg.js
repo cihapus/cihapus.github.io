@@ -208,7 +208,7 @@ messagewindow.style.backgroundColor = "white";
         
         var removeslash = thisurl.replace(/\//g, "__");//remove forward slashes
         console.log("removeslash - "+removeslash);
-         var removecolon = removeslash.replace(/\:/g, "_-_");//remove forward slashes
+         var removecolon = removeslash.replace(/\:/g, "-_-");//remove forward slashes
         console.log("removecolon- "+removecolon);
         
         
@@ -219,6 +219,8 @@ messagewindow.style.backgroundColor = "white";
         var metadiv = document.createElement("DIV");
         metadiv.id = "metadiv";
         
+        
+        //filename input
          var inputfilenamelabel = document.createElement("LABEL");
         inputfilenamelabel.className="inputlab";
        inputfilenamelabel.setAttribute("for", "filename");
@@ -234,10 +236,42 @@ messagewindow.style.backgroundColor = "white";
   inputfilename.value=f.name;
   inputfilename.className = "metainputbox";
         
+        
+        //url input
+         var urllabel = document.createElement("LABEL");
+        urllabel.className="inputlab";
+       urllabel.setAttribute("for", "urlinput");
+        
+         var urllabeltext = document.createTextNode("Dowloaded from:"); 
+        urllabel.appendChild(urllabeltext);
+        
+        
+   var inputurl = document.createElement("INPUT");
+  inputurl.id="urlinput";
+  inputurl.name="urlinput";
+  inputurl.type="text";
+  inputurl.value=f.name;
+  inputurl.className = "metainputbox";
+        
+        
+        
+        
+        
+        
+        
+        
         //add the inputs to the div
         metadiv.appendChild(inputfilenamelabel);
         
         metadiv.appendChild(inputfilename);
+        
+          metadiv.appendChild(urllabel);
+        
+        metadiv.appendChild(inputurl);
+        
+        
+        
+        
         
         //add the div to the messagewindow
         var getMsgWindow = document.getElementById("submitmeta");
