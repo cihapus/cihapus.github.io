@@ -204,6 +204,13 @@ messagewindow.style.backgroundColor = "white";
       
       console.log("info: "+thisfilename, thisurl, thisfiledate);
       
+        //convert url to useable filename...
+        
+        var safefilename = thisfilename.replace(/\//g, "__");//remove forward slashes
+        console.log("safe string - "+safefilename);
+        
+        
+        
         
         //build the metadata input fields...
         var metadiv = document.createElement("DIV");
