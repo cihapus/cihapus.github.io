@@ -206,8 +206,11 @@ messagewindow.style.backgroundColor = "white";
       
         //convert url to useable filename...
         
-        var safefilename = thisfilename.replace(/\//g, "__");//remove forward slashes
-        console.log("safe string - "+safefilename);
+        var removeslash = thisurl.replace(/\//g, "__");//remove forward slashes
+        console.log("removeslash - "+removeslash);
+         var removecolon = removeslash.replace(/\:/g, "_-_");//remove forward slashes
+        console.log("removecolon- "+removecolon);
+        
         
         
         
