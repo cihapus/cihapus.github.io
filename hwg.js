@@ -210,7 +210,7 @@ messagewindow.style.backgroundColor = "white";
         metadiv.id = "metadiv";
         
          var inputfilenamelabel = document.createElement("LABEL");
-        inputfilenamelabel.class="inputlab";
+        inputfilenamelabel.className="inputlab";
        inputfilenamelabel.setAttribute("for", "filename");
         
          var labeltext = document.createTextNode("Filename:"); 
