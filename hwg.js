@@ -237,6 +237,18 @@ messagewindow.style.backgroundColor = "white";
         
         
         
+        //style the inputs/div
+          var styleinputs = document.querySelectorAll('.inputlab');
+  
+        console.log("styleinputlength==" +styleinputs.length);
+        
+  for(let i=0; i<styleinputs.length; i++){
+  
+  styleinputs[i].style.padding = "20px";
+    styleinputs[i].color = "#333";
+    
+  }
+        
         
         
         //call this if compress files box is checked... 
@@ -285,14 +297,7 @@ console.log("compress success, result and name: " +result+"=="+result.name);
   
    document.getElementById('files').addEventListener('change', handleFileClick, false);
   
-  var styleinputs = document.querySelectorAll('.inputlab');
-  
-  for(let i=0; i<styleinputs.length; i++){
-  
-  styleinputs[i].style.padding = "20px";
-    styleinputs[i].color = "#333";
-    
-  }
+
   
   
   //drop zone handler
