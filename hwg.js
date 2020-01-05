@@ -247,7 +247,7 @@ messagewindow.style.backgroundColor = "white";
   for(let i=0; i<styleinputlabels.length; i++){
   
   styleinputlabels[i].style.padding = "20px";
-    styleinputlabels[i].style.color = "#ccc";
+    styleinputlabels[i].style.color = "#8e8e8e";
     
   }
         
@@ -255,7 +255,7 @@ messagewindow.style.backgroundColor = "white";
   
   styleinputs[i].style.margin = "10px";
     styleinputs[i].style.color = "#333";
-      styleinputs[i].style.width = "100%";
+      styleinputs[i].style.width = "50%";
   }
         
         
