@@ -222,6 +222,7 @@ messagewindow.style.backgroundColor = "white";
   inputfilename.name="filename";
   inputfilename.type="text";
   inputfilename.value=f.name;
+  inputfilename.className = "metainputbox";
         
         //add the inputs to the div
         metadiv.appendChild(inputfilenamelabel);
@@ -246,14 +247,14 @@ messagewindow.style.backgroundColor = "white";
   for(let i=0; i<styleinputlabels.length; i++){
   
   styleinputlabels[i].style.padding = "20px";
-    styleinputlabels[i].style.color = "#333";
+    styleinputlabels[i].style.color = "#ccc";
     
   }
         
           for(let i=0; i<styleinputs.length; i++){
   
   styleinputs[i].style.margin = "10px";
-    styleinputs[i].style.color = "#ccc";
+    styleinputs[i].style.color = "#333";
       styleinputs[i].style.width = "100%";
   }
         
