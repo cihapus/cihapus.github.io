@@ -299,16 +299,16 @@ messagewindow.style.backgroundColor = "white";
   cc0.className = "radioinputbox";
  
         
-        cc0.innerHTML += "<span>CC0</span>";
+        cc0.innerHTML += "CC0";
         
-        
+           licencelabel.appendChild(cc0);
         
         
       //  var cc0text = document.createTextNode("CC0 / Public Domain"); 
        // cc0.appendChild(cc0text);
         
         
-        
+         //var ccby4label = document.createElement("LABEL");
         
         var ccby4 = document.createElement("INPUT");
   ccby4.id="ccby4";
@@ -318,7 +318,9 @@ messagewindow.style.backgroundColor = "white";
   ccby4.className = "radioinputbox";
         
         
- ccby4.innerHTML += "<span>CC BY 4.0</span>";
+ ccby4.innerHTML += "CC BY 4.0";
+         licencelabel.appendChild(ccby4);
+        //ccby4label.appendChild(ccby4);
         
       //  var ccby4text = document.createTextNode("CC BY 4.0"); 
       //  ccby4.appendChild(ccby4text);
@@ -327,8 +329,8 @@ messagewindow.style.backgroundColor = "white";
         
           licencediv.appendChild(licencelabel);
         
-        licencediv.appendChild(cc0);
-          licencediv.appendChild(ccby4);
+     //   licencediv.appendChild(cc0);
+       //   licencediv.appendChild(ccby4);
         
         
         
