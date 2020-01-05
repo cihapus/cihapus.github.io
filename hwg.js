@@ -308,7 +308,7 @@ messagewindow.style.backgroundColor = "white";
        // cc0.appendChild(cc0text);
         
         
-         //var ccby4label = document.createElement("LABEL");
+         var ccby4label = document.createElement("LABEL");
         
         var ccby4 = document.createElement("INPUT");
   ccby4.id="ccby4";
@@ -319,8 +319,8 @@ messagewindow.style.backgroundColor = "white";
         
         
  ccby4.innerHTML += "CC BY 4.0";
-         licencelabel.appendChild(ccby4);
-        //ccby4label.appendChild(ccby4);
+        // licencelabel.appendChild(ccby4);
+        ccby4label.appendChild(ccby4);
         
       //  var ccby4text = document.createTextNode("CC BY 4.0"); 
       //  ccby4.appendChild(ccby4text);
@@ -330,7 +330,7 @@ messagewindow.style.backgroundColor = "white";
           licencediv.appendChild(licencelabel);
         
      //   licencediv.appendChild(cc0);
-       //   licencediv.appendChild(ccby4);
+        licencediv.appendChild(ccby4label);
         
         
         
