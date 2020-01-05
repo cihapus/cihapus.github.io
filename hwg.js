@@ -335,6 +335,7 @@ messagewindow.style.backgroundColor = "white";
         var getMsgWindow = document.getElementById("submitmeta");
         getMsgWindow.appendChild(filenamediv);
            getMsgWindow.appendChild(urldiv);
+         getMsgWindow.appendChild(licencediv);
         
         
         
