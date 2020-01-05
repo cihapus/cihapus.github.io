@@ -309,7 +309,7 @@ messagewindow.style.backgroundColor = "white";
         
         
          var ccby4label = document.createElement("LABEL");
-        ccby4label.setAttribute("for", "ccby4input");
+        ccby4label.setAttribute("for", "licenceinput");
         
          var ccby4labeltext = document.createTextNode("CC BY 4.0 "); 
         ccby4label.appendChild(ccby4labeltext);
@@ -320,9 +320,10 @@ messagewindow.style.backgroundColor = "white";
         
         var ccby4 = document.createElement("INPUT");
   ccby4.id="ccby4input";
-  ccby4.name="ccby4input";
+  ccby4.name="licenceinput";
   ccby4.type="radio";
   //inputurl.value=thisurl;
+  ccby4.value="ccby4";
   ccby4.className = "radioinputbox";
         
         
