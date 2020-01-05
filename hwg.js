@@ -64,6 +64,15 @@ function initMeta(){
   messagewindowbutton.id = "closemessagewindow";
   messagewindowbutton.innerHTML = "close popup";
   
+  
+  messagewindowbutton.style.position = "fixed";
+  messagewindowbutton.style.bottom = "10px";
+  messagewindowbutton.style.right = "10px";
+  messagewindowbutton.style.padding = "10px";
+    messagewindowbutton.style.border = "0px";
+     messagewindowbutton.style.background = "#333";
+     messagewindowbutton.style.color = "#fff";
+  
   messagewindow.style.zIndex = "9999";
   
    messagewindow.style.minHeight="400px";
@@ -80,6 +89,8 @@ messagewindow.style.margin = "20px";
 messagewindow.style.backgroundColor = "white"; 
   messagewindow.style.color="black";
   messagewindow.style.overflowY = "scroll";
+  
+  
   
   
   
