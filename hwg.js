@@ -238,16 +238,27 @@ messagewindow.style.backgroundColor = "white";
         
         
         //style the inputs/div
-          var styleinputs = document.querySelectorAll('.inputlab');
+          var styleinputlabels = document.querySelectorAll('.inputlab');
+    var styleinputs = document.querySelectorAll('.metainputbox');
   
-        console.log("styleinputlength==" +styleinputs.length);
+      
         
-  for(let i=0; i<styleinputs.length; i++){
+  for(let i=0; i<styleinputlabels.length; i++){
   
-  styleinputs[i].style.padding = "20px";
-    styleinputs[i].color = "#333";
+  styleinputlabels[i].style.padding = "20px";
+    styleinputlabels[i].style.color = "#333";
     
   }
+        
+          for(let i=0; i<styleinputs.length; i++){
+  
+  styleinputs[i].style.margin = "10px";
+    styleinputs[i].style.color = "#ccc";
+      styleinputs[i].style.width = "100%";
+  }
+        
+        
+        
         
         
         
