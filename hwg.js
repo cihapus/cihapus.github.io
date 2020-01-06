@@ -450,7 +450,7 @@ messagewindow.style.backgroundColor = "white";
         
          function handleRadioButtonClick(e){
   
-    console.log("button clicked "+e.target, e.name);
+    console.log("button clicked "+e.target.name, e.target.id);
   
   }
         
@@ -481,13 +481,13 @@ messagewindow.style.backgroundColor = "white";
     styleradios[i].style.color = "#333";
       styleradios[i].style.border ="1px dashed #555";
            styleradios[i].style.margin = "4px";
-           styleradios[i].addEventListener('click', handleRadioButtonClick);
+           
   }
         
           for(let i=0; i<styleradiobuttons.length; i++){
   
   styleradiobuttons[i].style.margin = "4px";
-   
+   styleradios[i].addEventListener('click', handleRadioButtonClick);
   }
         
         
