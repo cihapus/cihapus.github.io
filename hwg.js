@@ -460,17 +460,22 @@ messagewindow.style.backgroundColor = "white";
    
            var thisclick = e.target.id;
            if(!thisclick){
-           return;
+             console.log("no id so returning");
+           return
            }
            else{
             console.log("button clicked "+e.target.id);
            }
   
-           if(!previousRadio){
-           previousRadio = thisclick;
+           if(previousRadio===null){
+             console.log("previous null");
+             previousRadio = thisclick;
              var getRadioElement = document.getElementById(thisclick);
              getRadioElement.style.border = "1px solid #f00";
-           } 
+           }
+           else{
+           console.log("previousradio not null");
+           }
            
            
            
