@@ -93,7 +93,7 @@ messagewindow.style.backgroundColor = "white";
   messagewindow.style.overflowY = "scroll";
   messagewindow.style.border="1px solid #333";
   
-  messagewindow.style.boxShadow="10px 10px 10px #333" 
+  messagewindow.style.boxShadow="10px 20px 10px #333" 
   
   
   
@@ -284,7 +284,7 @@ messagewindow.style.backgroundColor = "white";
         
         
          var licencelabel = document.createElement("LABEL");
-        licencelabel.className="inputlab";
+        licencelabel.className="radiolab";
        licencelabel.setAttribute("for", "licenceinput");
         
          var licencelabeltext = document.createTextNode("CC0 / PUBLIC DOMAIN"); 
@@ -304,43 +304,59 @@ messagewindow.style.backgroundColor = "white";
            licencelabel.appendChild(cc0);
         
         
-      //  var cc0text = document.createTextNode("CC0 / Public Domain"); 
-       // cc0.appendChild(cc0text);
+     
         
-        
+     //cc4   
          var ccby4label = document.createElement("LABEL");
         ccby4label.setAttribute("for", "licenceinput");
+        licencelabel.className="radiolab";
         
-         var ccby4labeltext = document.createTextNode("CC BY 4.0 "); 
+         var ccby4labeltext = document.createTextNode("CC BY (Attribution)"); 
         ccby4label.appendChild(ccby4labeltext);
-        
-        
-        
-        
         
         var ccby4 = document.createElement("INPUT");
   ccby4.id="ccby4input";
   ccby4.name="licenceinput";
   ccby4.type="radio";
-  //inputurl.value=thisurl;
   ccby4.value="ccby4";
   ccby4.className = "radioinputbox";
         
-        
- //ccby4.innerHTML += "CC BY 4.0";
-        // licencelabel.appendChild(ccby4);
         ccby4label.appendChild(ccby4);
         
-      //  var ccby4text = document.createTextNode("CC BY 4.0"); 
-      //  ccby4.appendChild(ccby4text);
+   
+        
+        
+        //SA
+        
+        var ccbysalabel = document.createElement("LABEL");
+        ccbysalabel.setAttribute("for", "licenceinput");
+        licencelabel.className="radiolab";
+        
+         var ccbysalabeltext = document.createTextNode("CC BY SA (Attribution ShareAlike) "); 
+        ccbysalabel.appendChild(ccbysalabeltext);
+        
+        var ccbysa = document.createElement("INPUT");
+  ccbysa.id="ccbysainput";
+  ccbysa.name="licenceinput";
+  ccbysa.type="radio";
+  ccbysa.value="ccbysa";
+  ccbysa.className = "radioinputbox";
+        
+        ccbysalabel.appendChild(ccbysa);
+        
+        
+        
+        
+        
+        
         
         
         
           licencediv.appendChild(licencelabel);
         
-     //   licencediv.appendChild(cc0);
+    
         licencediv.appendChild(ccby4label);
-        
+         licencediv.appendChild(ccbysalabel);
         
         
         
@@ -363,7 +379,7 @@ messagewindow.style.backgroundColor = "white";
         //style the inputs/div
           var styleinputlabels = document.querySelectorAll('.inputlab');
     var styleinputs = document.querySelectorAll('.metainputbox');
-  
+  var styleradios = document.querySelectorAll('.radiolab');
       
         
   for(let i=0; i<styleinputlabels.length; i++){
@@ -380,7 +396,12 @@ messagewindow.style.backgroundColor = "white";
       styleinputs[i].style.width = "50%";
   }
         
-        
+         for(let i=0; i<styleradios.length; i++){
+  
+  styleradios[i].style.padding = "6px";
+    styleradios[i].style.color = "#333";
+      styleradios[i].style.border ="1px dashed #e4e4e4";
+  }
         
         
         
