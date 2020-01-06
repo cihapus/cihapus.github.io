@@ -382,6 +382,28 @@ messagewindow.style.backgroundColor = "white";
         ccbynclabel.appendChild(ccbync);
         
         
+           //CC BY-NC-SA
+        
+        var ccbyncsalabel = document.createElement("LABEL");
+        ccbyncsalabel.setAttribute("for", "licenceinput");
+        ccbyncsalabel.className="radiolab";
+        
+         var ccbyncsalabeltext = document.createTextNode("CC BY NC-SA (Attribution-NonCommercial ShareAlike) "); 
+        ccbyncsalabel.appendChild(ccbyncsalabeltext);
+        
+        var ccbyncsa = document.createElement("INPUT");
+  ccbyncsa.id="ccbyncsainput";
+  ccbyncsa.name="licenceinput";
+  ccbyncsa.type="radio";
+  ccbyncsa.value="ccbyncsa";
+  ccbyncsa.className = "radioinputbox";
+        
+        ccbyncsalabel.appendChild(ccbyncsa);
+        
+        
+        
+        
+        
         
         
         
@@ -395,7 +417,7 @@ messagewindow.style.backgroundColor = "white";
          licencediv.appendChild(ccbysalabel);
         licencediv.appendChild(ccbyndlabel);
          licencediv.appendChild(ccbynclabel);
-        
+               licencediv.appendChild(ccbyncsalabel);
         
         
         
@@ -416,7 +438,7 @@ messagewindow.style.backgroundColor = "white";
           var styleinputlabels = document.querySelectorAll('.inputlab');
     var styleinputs = document.querySelectorAll('.metainputbox');
   var styleradios = document.querySelectorAll('.radiolab');
-      
+       var styleradiobuttons = document.querySelectorAll('.radioinputbox');
         
   for(let i=0; i<styleinputlabels.length; i++){
   
@@ -436,10 +458,15 @@ messagewindow.style.backgroundColor = "white";
   
   styleradios[i].style.padding = "6px";
     styleradios[i].style.color = "#333";
-      styleradios[i].style.border ="1px dashed #e4e4e4";
+      styleradios[i].style.border ="1px dashed #555";
+           styleradios[i].style.margin = "4px";
   }
         
-        
+          for(let i=0; i<styleradiobuttons.length; i++){
+  
+  styleradiobuttons[i].style.padding = "4px";
+   
+  }
         
         
         //call this if compress files box is checked... 
