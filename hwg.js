@@ -400,7 +400,23 @@ messagewindow.style.backgroundColor = "white";
         
         ccbyncsalabel.appendChild(ccbyncsa);
         
+        //CC BY-NC-ND
         
+        var ccbyncndlabel = document.createElement("LABEL");
+        ccbyncndlabel.setAttribute("for", "licenceinput");
+        ccbyncndlabel.className="radiolab";
+        
+         var ccbyncndlabeltext = document.createTextNode("CC BY NC-SA (Attribution-NonCommercial NoDerivs) "); 
+        ccbyncndlabel.appendChild(ccbyncndlabeltext);
+        
+        var ccbyncnd = document.createElement("INPUT");
+  ccbyncnd.id="ccbyncndinput";
+  ccbyncnd.name="licenceinput";
+  ccbyncnd.type="radio";
+  ccbyncnd.value="ccbyncnd";
+  ccbyncnd.className = "radioinputbox";
+        
+        ccbyncndlabel.appendChild(ccbyncnd);
         
         
         
@@ -418,6 +434,7 @@ messagewindow.style.backgroundColor = "white";
         licencediv.appendChild(ccbyndlabel);
          licencediv.appendChild(ccbynclabel);
                licencediv.appendChild(ccbyncsalabel);
+        licencediv.appendChild(ccbyncndlabel);
         
         
         
@@ -431,7 +448,11 @@ messagewindow.style.backgroundColor = "white";
         
         
         
-        
+         function handleRadioButtonClick(e){
+  
+    console.log("button clicked "+e.target, e.name);
+  
+  }
         
         
         //style the inputs/div
@@ -460,11 +481,12 @@ messagewindow.style.backgroundColor = "white";
     styleradios[i].style.color = "#333";
       styleradios[i].style.border ="1px dashed #555";
            styleradios[i].style.margin = "4px";
+           styleradios[i].addEventListener('click', handleRadioButtonClick);
   }
         
           for(let i=0; i<styleradiobuttons.length; i++){
   
-  styleradiobuttons[i].style.padding = "4px";
+  styleradiobuttons[i].style.margin = "4px";
    
   }
         
@@ -477,9 +499,15 @@ messagewindow.style.backgroundColor = "white";
         
     //}//for loop to look through files
     document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+        
+        
+        
+        
+        
   }//handleFileSelect
   
   
+ 
   
   
   //checkbox will indicate whether to create compressed version, and perhaps slider for quality with default = 0.7
