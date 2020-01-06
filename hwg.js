@@ -18,6 +18,10 @@ function initMeta(){
   console.log("working...");
 //alert("hello world");
   
+  
+  
+ 
+  
   if (window.File && window.FileReader && window.FileList && window.Blob) {
   // Great success! All the File APIs are supported.
     console.log("file reader support");
@@ -154,6 +158,9 @@ messagewindow.style.backgroundColor = "white";
    //function handleFileSelect(evt) {
       function handleFileSelect(files) {
      
+        
+         var previousRadio = null;
+        
     
         /*once file uploaded we present a new menu of input boxes for meta data:
         filename: should be files[i].name
@@ -450,9 +457,25 @@ messagewindow.style.backgroundColor = "white";
         
          function handleRadioButtonClick(e){
   
-    console.log("button clicked "+e.target.name, e.target.id);
+   
+           var thisclick = e.target.id;
+           if(!thisclick){
+           return;
+           }
+           else{
+            console.log("button clicked "+e.target.id);
+           }
   
-  }
+           if(!previousRadio){
+           previousRadio = thisclick;
+             var getRadioElement = document.getElementById(thisclick);
+             getRadioElement.style.border = "1px solid #f00";
+           } 
+           
+           
+           
+           
+  }//handle radio click
         
         
         //style the inputs/div
