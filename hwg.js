@@ -363,7 +363,23 @@ messagewindow.style.backgroundColor = "white";
         
         ccbyndlabel.appendChild(ccbynd);
         
+          //CC BY-NC
         
+        var ccbynclabel = document.createElement("LABEL");
+        ccbynclabel.setAttribute("for", "licenceinput");
+        ccbynclabel.className="radiolab";
+        
+         var ccbynclabeltext = document.createTextNode("CC BY NC (Attribution-NonCommercial ) "); 
+        ccbynclabel.appendChild(ccbynclabeltext);
+        
+        var ccbync = document.createElement("INPUT");
+  ccbync.id="ccbyncinput";
+  ccbync.name="licenceinput";
+  ccbync.type="radio";
+  ccbync.value="ccbync";
+  ccbync.className = "radioinputbox";
+        
+        ccbynclabel.appendChild(ccbync);
         
         
         
@@ -378,7 +394,7 @@ messagewindow.style.backgroundColor = "white";
         licencediv.appendChild(ccby4label);
          licencediv.appendChild(ccbysalabel);
         licencediv.appendChild(ccbyndlabel);
-        
+         licencediv.appendChild(ccbynclabel);
         
         
         
