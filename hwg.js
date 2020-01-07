@@ -502,7 +502,7 @@ messagewindow.style.backgroundColor = "white";
            else{
            console.log("previousradio not null");
              var previousRadioElement = document.getElementById("label-"+previousRadio);
-             previousRadioElement.style.border="1px dashed #555";
+             previousRadioElement.style.border="1px dashed #666";
              
              var getRadioElement = document.getElementById("label-"+thisclick);
              getRadioElement.style.border="1px solid #0055ff";
@@ -540,7 +540,7 @@ messagewindow.style.backgroundColor = "white";
   
   styleradios[i].style.padding = "6px";
     styleradios[i].style.color = "#333";
-      styleradios[i].style.border ="1px dashed #555";
+      styleradios[i].style.border ="1px dashed #666";
            styleradios[i].style.margin = "4px";
            
   }
