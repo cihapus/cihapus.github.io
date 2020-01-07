@@ -496,11 +496,18 @@ messagewindow.style.backgroundColor = "white";
              else{
                console.log("styling element");
              getRadioElement.style.border="2px solid #f00";
-               getRadioElement.style.background="#000";
+               
              }
              }
            else{
            console.log("previousradio not null");
+             var previousRadioElement = document.getElementById("label-"+previousRadio);
+             previousRadioElement.style.border="1px dashed #555";
+             
+             var getRadioElement = document.getElementById("label-"+thisclick);
+             getRadioElement.style.border="2px solid #f00";
+             
+             previousRadio = thisclick;
            }
            
            
