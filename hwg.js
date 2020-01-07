@@ -495,7 +495,7 @@ messagewindow.style.backgroundColor = "white";
              }
              else{
                console.log("styling element");
-             getRadioElement.style.border="2px solid #f00";
+             getRadioElement.style.border="1px solid #0055ff";
                
              }
              }
@@ -505,7 +505,7 @@ messagewindow.style.backgroundColor = "white";
              previousRadioElement.style.border="1px dashed #555";
              
              var getRadioElement = document.getElementById("label-"+thisclick);
-             getRadioElement.style.border="2px solid #f00";
+             getRadioElement.style.border="1px solid #0055ff";
              
              previousRadio = thisclick;
            }
