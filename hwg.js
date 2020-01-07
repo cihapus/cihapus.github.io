@@ -472,14 +472,23 @@ messagewindow.style.backgroundColor = "white";
              console.log("no id so returning");
            return
            }
-           else{
+          
             console.log("button clicked "+thisclick);
-           }
+             
+             var checkforlabel = thisclick.includes("label-");
+             if (checkforlabel){
+               console.log("clicked label, returning");
+             return;
+             }
+             
+             
+           
   
            if(previousRadio===null){
              console.log("previous null");
              previousRadio = thisclick;
              var getlabelid = "label-"+thisclick;
+             console.log(getlabelid);
              var getRadioElement = document.getElementById(getlabelid);
              if(!getRadioElement){
              console.log("no element found");
