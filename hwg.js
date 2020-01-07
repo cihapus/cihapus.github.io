@@ -324,7 +324,7 @@ messagewindow.style.backgroundColor = "white";
         ccby4label.appendChild(ccby4labeltext);
         
         var ccby4 = document.createElement("INPUT");
-  ccby4.id="ccby4input";
+  ccby4.id="ccby4";
   ccby4.name="licenceinput";
   ccby4.type="radio";
   ccby4.value="ccby4";
@@ -346,7 +346,7 @@ messagewindow.style.backgroundColor = "white";
         ccbysalabel.appendChild(ccbysalabeltext);
         
         var ccbysa = document.createElement("INPUT");
-  ccbysa.id="ccbysainput";
+  ccbysa.id="ccbysa";
   ccbysa.name="licenceinput";
   ccbysa.type="radio";
   ccbysa.value="ccbysa";
@@ -367,7 +367,7 @@ messagewindow.style.backgroundColor = "white";
         ccbyndlabel.appendChild(ccbyndlabeltext);
         
         var ccbynd = document.createElement("INPUT");
-  ccbynd.id="ccbyndinput";
+  ccbynd.id="ccbynd";
   ccbynd.name="licenceinput";
   ccbynd.type="radio";
   ccbynd.value="ccbynd";
@@ -387,7 +387,7 @@ messagewindow.style.backgroundColor = "white";
         ccbynclabel.appendChild(ccbynclabeltext);
         
         var ccbync = document.createElement("INPUT");
-  ccbync.id="ccbyncinput";
+  ccbync.id="ccbync";
   ccbync.name="licenceinput";
   ccbync.type="radio";
   ccbync.value="ccbync";
@@ -407,7 +407,7 @@ messagewindow.style.backgroundColor = "white";
         ccbyncsalabel.appendChild(ccbyncsalabeltext);
         
         var ccbyncsa = document.createElement("INPUT");
-  ccbyncsa.id="ccbyncsainput";
+  ccbyncsa.id="ccbyncsa";
   ccbyncsa.name="licenceinput";
   ccbyncsa.type="radio";
   ccbyncsa.value="ccbyncsa";
@@ -426,7 +426,7 @@ messagewindow.style.backgroundColor = "white";
         ccbyncndlabel.appendChild(ccbyncndlabeltext);
         
         var ccbyncnd = document.createElement("INPUT");
-  ccbyncnd.id="ccbyncndinput";
+  ccbyncnd.id="ccbyncnd";
   ccbyncnd.name="licenceinput";
   ccbyncnd.type="radio";
   ccbyncnd.value="ccbyncnd";
