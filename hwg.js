@@ -293,7 +293,8 @@ messagewindow.style.backgroundColor = "white";
          var licencelabel = document.createElement("LABEL");
         licencelabel.className="radiolab";
        licencelabel.setAttribute("for", "licenceinput");
-        
+         licencelabel.id="label-cc0";
+         
          var licencelabeltext = document.createTextNode("CC0 / PUBLIC DOMAIN"); 
         licencelabel.appendChild(licencelabeltext);
         
@@ -317,6 +318,7 @@ messagewindow.style.backgroundColor = "white";
          var ccby4label = document.createElement("LABEL");
         ccby4label.setAttribute("for", "licenceinput");
         ccby4label.className="radiolab";
+        ccby4label.id="label-ccby4";
         
          var ccby4labeltext = document.createTextNode("CC BY (Attribution)"); 
         ccby4label.appendChild(ccby4labeltext);
@@ -338,6 +340,7 @@ messagewindow.style.backgroundColor = "white";
         var ccbysalabel = document.createElement("LABEL");
         ccbysalabel.setAttribute("for", "licenceinput");
         ccbysalabel.className="radiolab";
+        ccbysalabel.id="label-ccbysa";
         
          var ccbysalabeltext = document.createTextNode("CC BY SA (Attribution ShareAlike) "); 
         ccbysalabel.appendChild(ccbysalabeltext);
@@ -357,6 +360,8 @@ messagewindow.style.backgroundColor = "white";
         var ccbyndlabel = document.createElement("LABEL");
         ccbyndlabel.setAttribute("for", "licenceinput");
         ccbyndlabel.className="radiolab";
+        ccbyndlabel.id="label-ccbynd";
+        
         
          var ccbyndlabeltext = document.createTextNode("CC BY ND (No Derivatives) "); 
         ccbyndlabel.appendChild(ccbyndlabeltext);
@@ -375,6 +380,8 @@ messagewindow.style.backgroundColor = "white";
         var ccbynclabel = document.createElement("LABEL");
         ccbynclabel.setAttribute("for", "licenceinput");
         ccbynclabel.className="radiolab";
+        ccbynclabel.id="label-ccbync";
+        
         
          var ccbynclabeltext = document.createTextNode("CC BY NC (Attribution-NonCommercial ) "); 
         ccbynclabel.appendChild(ccbynclabeltext);
@@ -394,6 +401,7 @@ messagewindow.style.backgroundColor = "white";
         var ccbyncsalabel = document.createElement("LABEL");
         ccbyncsalabel.setAttribute("for", "licenceinput");
         ccbyncsalabel.className="radiolab";
+        ccbyncsalabel.id="label-ccbyncsa";
         
          var ccbyncsalabeltext = document.createTextNode("CC BY NC-SA (Attribution-NonCommercial ShareAlike) "); 
         ccbyncsalabel.appendChild(ccbyncsalabeltext);
@@ -412,6 +420,7 @@ messagewindow.style.backgroundColor = "white";
         var ccbyncndlabel = document.createElement("LABEL");
         ccbyncndlabel.setAttribute("for", "licenceinput");
         ccbyncndlabel.className="radiolab";
+        ccbyncndlabel.id="label-ccbyncnd";
         
          var ccbyncndlabeltext = document.createTextNode("CC BY NC-SA (Attribution-NonCommercial NoDerivs) "); 
         ccbyncndlabel.appendChild(ccbyncndlabeltext);
@@ -470,13 +479,14 @@ messagewindow.style.backgroundColor = "white";
            if(previousRadio===null){
              console.log("previous null");
              previousRadio = thisclick;
-             var getRadioElement = document.getElementById(thisclick);
+             var getlabelid = "label-"+thisclick;
+             var getRadioElement = document.getElementById(getlabelid);
              if(!getRadioElement){
              console.log("no element found");
              }
              else{
                console.log("styling element");
-             getRadioElement.style.color="#f00";
+             getRadioElement.style.border="2px solid #f00";
                getRadioElement.style.background="#000";
              }
              }
