@@ -85,12 +85,12 @@ function initMeta(){
   
    var messagewindowbutton = document.createElement("BUTTON");
   messagewindowbutton.id = "closemessagewindow";
-  messagewindowbutton.innerHTML = "close popup";
+  messagewindowbutton.innerHTML = "X";
   
   
   messagewindowbutton.style.position = "absolute";
-  messagewindowbutton.style.bottom = "10px";
-  messagewindowbutton.style.left = "10px";
+  messagewindowbutton.style.top = "10px";
+  messagewindowbutton.style.right = "10px";
   messagewindowbutton.style.padding = "10px";
     messagewindowbutton.style.border = "0px";
      messagewindowbutton.style.background = "#333";
@@ -122,13 +122,26 @@ messagewindow.style.backgroundColor = "white";
    messagewindow.style.resize="both";
   
   
+  var headerbar = document.createElement("div");
+  headerbar.id="headerbar";
+  headerbar.style.backgroundColor ="#333";
+  headerbar.style.width ="100%";
+  headerbar.style.textAlign = "center";
+  headerbar.style.margin ="0 auto";
+  
   
   var title = document.createElement("H2")     
   title.id="submitmetaheader";
-  var titleContent = document.createTextNode("Submit metadata for ");
+  var titleContent = document.createTextNode("Hwgwd Submit Metadata");
   title.appendChild(titleContent);
   
-  messagewindow.appendChild(title);  
+  
+  headerbar.appendChild(title);
+  messagewindow.appendChild(headerbar);  
+  //messagewindow.appendChild(title);  
+  
+  
+  //make headerbar draggable??
 
    messagewindow.appendChild(messagewindowdropzone);  
   //messagewindow.appendChild(messagewindowfilereader);  
