@@ -53,10 +53,17 @@ function initMeta(){
   
   //
   
+  var messagewindowfrdiv = document.createElement("DIV");
+  messagewindowfrdiv.id = "messagewindowfrdiv";
+  
   var messagewindowfilereader = document.createElement("INPUT");
   messagewindowfilereader.id="files";
   messagewindowfilereader.name="files[]";
    messagewindowfilereader.type="file";
+   messagewindowfilereader.style.margin = "20px";
+  messagewindowfilereader.style.padding = "30px";
+  
+  messagewindowfrdiv.append(messagewindowfilereader);
   
     var messagewindowoutput = document.createElement("DIV");
   messagewindowoutput.id = "list";
@@ -124,9 +131,9 @@ messagewindow.style.backgroundColor = "white";
   messagewindow.appendChild(title);  
 
    messagewindow.appendChild(messagewindowdropzone);  
-  messagewindow.appendChild(messagewindowfilereader);  
+  //messagewindow.appendChild(messagewindowfilereader);  
   
-  
+  messagewindow.appendChild(messagewindowfrdiv);  
   
   
   messagewindow.appendChild(messagewindowoutput);  
@@ -257,7 +264,9 @@ messagewindow.style.backgroundColor = "white";
         //first get rid of the file submit boxes
         
         var getDropZone = document.getElementById("dropzone");
-          var getFileSubmitBtn = document.getElementById("files");
+          //var getFileSubmitBtn = document.getElementById("files");
+        var getFileSubmitBtn = document.getElementById("messagewindowfrdiv");//wrapped button in a div
+        
         
         if(!getDropZone || !getFileSubmitBtn){
         console.warn("no dropzone/file submit to remove");
