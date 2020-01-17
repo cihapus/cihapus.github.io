@@ -83,7 +83,8 @@ function initMeta(){
   
    messagewindow.style.minHeight="400px";
   messagewindow.style.minWidth="1000px";
-  messagewindow.style.maxHeight="600px";
+  //messagewindow.style.maxHeight="600px";
+  messagewindow.style.height="auto";
   
   
   messagewindow.style.position = "fixed";
@@ -465,8 +466,8 @@ messagewindow.style.backgroundColor = "white";
         var transinput = document.createElement("textarea");
 transinput.name = "transcriptioninput";
 //transinput.maxLength = "5000";
-transinput.cols = "80";
-transinput.rows = "40";
+transinput.cols = "100";
+transinput.rows = "10";
 transinput.placeholder = "Paste transcription here";
         
         transcriptiondiv.append(transinput);
