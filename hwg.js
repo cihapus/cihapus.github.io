@@ -36,6 +36,15 @@ function initMeta(){
   
   var messagewindowcontainer = document.createElement("DIV");
   messagewindowcontainer.id = "messagewindowcontainer";
+  messagewindowcontainer.style.width="auto";
+   messagewindowcontainer.style.height="100%";
+  messagewindowcontainer.style.position="fixed";
+  messagewindowcontainer.style.top="20px";
+  messagewindowcontainer.style.left="10px";
+  messagewindowcontainer.style.zIndex = "9999";
+   messagewindowcontainer.style.maxWidth="900px";
+   messagewindowcontainer.style.maxHeight="100%";
+   messagewindowcontainer.style.border = "2px solid red";
   
   
   var messagewindow = document.createElement("DIV");
@@ -82,7 +91,7 @@ function initMeta(){
 
   
   
-  messagewindow.style.zIndex = "9999";
+  messagewindow.style.zIndex = "999";
   
    messagewindow.style.minHeight="300px";
   messagewindow.style.minWidth="300px";
