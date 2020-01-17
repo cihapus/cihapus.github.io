@@ -59,6 +59,8 @@ function initMeta(){
   messagewindowdropzone.style.padding = "30px";
   messagewindowdropzone.style.border = "2px dashed #bbb";
   messagewindowdropzone.style.textAlign = "center";
+   messagewindowdropzone.style.minHeight = "200px";
+  
   
   
   
@@ -98,8 +100,9 @@ messagewindow.style.backgroundColor = "white";
   messagewindow.style.overflowY = "scroll";
   messagewindow.style.border="1px solid #333";
   
-  messagewindow.style.boxShadow="10px 20px 10px #333" 
+  messagewindow.style.boxShadow="10px 20px 10px #333";
   
+   messagewindow.style.resize="both";
   
   
   
