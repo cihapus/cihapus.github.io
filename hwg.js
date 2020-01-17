@@ -59,7 +59,7 @@ function initMeta(){
   messagewindowdropzone.style.padding = "30px";
   messagewindowdropzone.style.border = "2px dashed #bbb";
   messagewindowdropzone.style.textAlign = "center";
-   messagewindowdropzone.style.minHeight = "200px";
+   messagewindowdropzone.style.minHeight = "400px";
   
   
   
@@ -83,13 +83,13 @@ function initMeta(){
   
   messagewindow.style.zIndex = "9999";
   
-   messagewindow.style.minHeight="400px";
-  messagewindow.style.minWidth="1000px";
+   messagewindow.style.minHeight="300px";
+  messagewindow.style.minWidth="300px";
   //messagewindow.style.maxHeight="600px";
   messagewindow.style.height="auto";
+  messagewindow.style.width="80%";
   
-  
-  messagewindow.style.position = "fixed";
+  messagewindow.style.position = "absolute";
 messagewindow.style.top = "20px";
 messagewindow.style.left = "0px";
 messagewindow.style.margin = "20px";
@@ -106,7 +106,8 @@ messagewindow.style.backgroundColor = "white";
   
   
   
-  var title = document.createElement("H2")               
+  var title = document.createElement("H2")     
+  title.id="submitmetaheader";
   var titleContent = document.createTextNode("Submit metadata for ");
   title.appendChild(titleContent);
   
@@ -135,6 +136,57 @@ messagewindow.style.backgroundColor = "white";
   
   
   //after messagewindow has been built, add handlers
+  
+  dragElement(document.getElementById("submitmeta"));
+  
+  function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+  
+   function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}//dragelement
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   //handle direct click
