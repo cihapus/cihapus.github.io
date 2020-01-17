@@ -592,7 +592,7 @@ messagewindow.style.backgroundColor = "white";
         
         var langdrop = document.createElement("DIV");
         langdrop.id="langdropdiv";
-        landrop.width="45%";
+        langdrop.width="45%";
        langdrop.innerHTML=`<p><label>Select language</label>
              <select id = "selectlanguage">
   <option value="CY">Welsh</option>
