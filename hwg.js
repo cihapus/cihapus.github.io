@@ -453,6 +453,25 @@ messagewindow.style.backgroundColor = "white";
         licencediv.appendChild(ccbyncndlabel);
         
         
+        /*
+        
+        ADD TEXT AREA FOR ANY TRANSCRIPTION
+        
+        */
+        
+        var transcriptiondiv = document.createElement("DIV");
+        transcriptiondiv.id = "transcription";
+        
+        var transinput = document.createElement("textarea");
+transinput.name = "transcriptioninput";
+//transinput.maxLength = "5000";
+transinput.cols = "80";
+transinput.rows = "40";
+transinput.placeholder = "Paste transcription here";
+        
+        transcriptiondiv.append(transinput);
+        
+        
         
         
         
@@ -461,6 +480,15 @@ messagewindow.style.backgroundColor = "white";
         getMsgWindow.appendChild(filenamediv);
            getMsgWindow.appendChild(urldiv);
          getMsgWindow.appendChild(licencediv);
+        
+        
+         getMsgWindow.appendChild(transcriptiondiv);
+        
+        
+        
+        
+        
+        
         
         
         
