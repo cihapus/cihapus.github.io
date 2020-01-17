@@ -367,6 +367,18 @@ messagewindow.style.backgroundColor = "white";
         
            var licencediv = document.createElement("DIV");
         licencediv.id = "licencediv";
+        licencediv.style.display ="flex";
+        
+         licencediv.style.flexWrap = "wrap";
+        
+        /*let licencediv = document.createElement('div', { 
+          id : 'licencediv',
+          style : {}
+        })
+        */
+        
+        
+        
         
         
          var licencelabel = document.createElement("LABEL");
