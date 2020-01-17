@@ -91,7 +91,7 @@ function initMeta(){
   messagewindowbutton.style.position = "absolute";
   messagewindowbutton.style.top = "10px";
   messagewindowbutton.style.right = "10px";
-  messagewindowbutton.style.padding = "10px";
+  messagewindowbutton.style.padding = "4px 10px";
     messagewindowbutton.style.border = "0px";
      messagewindowbutton.style.background = "#333";
      messagewindowbutton.style.color = "#fff";
@@ -125,13 +125,15 @@ messagewindow.style.backgroundColor = "white";
   var headerbar = document.createElement("div");
   headerbar.id="headerbar";
   headerbar.style.backgroundColor ="#333";
-  headerbar.style.width ="100%";
+  headerbar.style.width ="80%";
   headerbar.style.textAlign = "center";
   headerbar.style.margin ="0 auto";
+  headerbar.style.maxWidth ="80%";
   
   
-  var title = document.createElement("H2")     
+  var title = document.createElement("H2");  
   title.id="submitmetaheader";
+  title.style.color="#fff";
   var titleContent = document.createTextNode("Hwgwd Submit Metadata");
   title.appendChild(titleContent);
   
@@ -559,6 +561,41 @@ messagewindow.style.backgroundColor = "white";
         
         /*
         
+        ADD CREDIT
+        
+        */
+        
+        
+        /*
+        
+        ADD LANGUAGE AND COMPRESS IMAGE
+        
+        */
+        
+         var creditdiv = document.createElement("DIV");
+        creditdiv.id = "creditdiv";
+       creditdiv.style.display ="flex";
+        
+         creditdiv.style.flexWrap = "wrap";
+        
+        
+        var langdrop = document.createElement("DIV");
+        langdrop.id="langdropdiv";
+       langdrop.innerHTML=`<p><label>Select list</label>
+             <select id = "selectlanguage">
+               <option value = "1">one</option>
+               <option value = "2">two</option>
+               <option value = "3">three</option>
+               <option value = "4">four</option>
+             </select>
+          </p>`;
+        
+        
+        
+        
+        
+        /*
+        
         ADD TEXT AREA FOR ANY TRANSCRIPTION
         
         */
@@ -585,6 +622,7 @@ transinput.placeholder = "Paste transcription here";
            getMsgWindow.appendChild(urldiv);
          getMsgWindow.appendChild(licencediv);
         
+        getMsgWindow.appendChild(langdrop);
         
          getMsgWindow.appendChild(transcriptiondiv);
         
