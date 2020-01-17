@@ -34,7 +34,8 @@ function initMeta(){
   
   
   
-  
+  var messagewindowcontainer = document.createElement("DIV");
+  messagewindowcontainer.id = "messagewindowcontainer";
   
   
   var messagewindow = document.createElement("DIV");
@@ -59,7 +60,7 @@ function initMeta(){
   messagewindowdropzone.style.padding = "30px";
   messagewindowdropzone.style.border = "2px dashed #bbb";
   messagewindowdropzone.style.textAlign = "center";
-   messagewindowdropzone.style.minHeight = "400px";
+   messagewindowdropzone.style.minHeight = "200px";
   
   
   
@@ -125,9 +126,13 @@ messagewindow.style.backgroundColor = "white";
   
  
   var getbody = document.querySelector("body"); 
-  document.body.appendChild(messagewindow); 
   
   
+  messagewindowcontainer.append(messagewindow);
+  
+  //document.body.appendChild(messagewindow); 
+  
+  document.body.appendChild(messagewindowcontainer); 
   
   
   
