@@ -385,6 +385,10 @@ messagewindow.style.backgroundColor = "white";
         licencediv.style.display ="flex";
         
          licencediv.style.flexWrap = "wrap";
+        licencediv.style.backgroundColor="#efefef";
+        licencediv.style.border ="1px solid #ddd";
+        licencediv.style.padding ="12px";
+        licencediv.style.margin ="12px";
         
         /*let licencediv = document.createElement('div', { 
           id : 'licencediv',
@@ -577,9 +581,12 @@ messagewindow.style.backgroundColor = "white";
        creditdiv.style.display ="flex";
         
          creditdiv.style.flexWrap = "wrap";
+        creditdiv.style.margin = "12px";
+        
+        
         
         creditdiv.innerHTML=`<p>
- <label for="creditinput">Credit required:</label>
+ <label for="creditinput">Attribution required:</label>
 <input type="text" id="creditinput" name="creditinput">
 </p>
 `;
