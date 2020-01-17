@@ -33,7 +33,7 @@ function initMeta(){
   
   
   
-  
+  /*
   var messagewindowcontainer = document.createElement("DIV");
   messagewindowcontainer.id = "messagewindowcontainer";
   messagewindowcontainer.style.width="auto";
@@ -45,7 +45,7 @@ function initMeta(){
    messagewindowcontainer.style.maxWidth="900px";
    messagewindowcontainer.style.maxHeight="100%";
    messagewindowcontainer.style.border = "2px solid red";
-  
+  */
   
   var messagewindow = document.createElement("DIV");
   messagewindow.id = "submitmeta";
@@ -137,11 +137,11 @@ messagewindow.style.backgroundColor = "white";
   var getbody = document.querySelector("body"); 
   
   
-  messagewindowcontainer.append(messagewindow);
+  //essagewindowcontainer.append(messagewindow);
   
-  //document.body.appendChild(messagewindow); 
+  document.body.appendChild(messagewindow); 
   
-  document.body.appendChild(messagewindowcontainer); 
+  //document.body.appendChild(messagewindowcontainer); 
   
   
   
