@@ -578,6 +578,11 @@ messagewindow.style.backgroundColor = "white";
         
          creditdiv.style.flexWrap = "wrap";
         
+        creditdiv.innerHTML=`<p>
+ <label for="creditinput">Credit required:</label>
+<input type="text" id="creditinput" name="creditinput">
+</p>
+`;
         
         
         
@@ -592,7 +597,10 @@ messagewindow.style.backgroundColor = "white";
         
         var langdrop = document.createElement("DIV");
         langdrop.id="langdropdiv";
-        langdrop.width="45%";
+        langdrop.width="40%";
+        langdrop.style.margin="12px";
+        
+        
        langdrop.innerHTML=`<p><label>Select language</label>
              <select id = "selectlanguage">
   <option value="CY">Welsh</option>
@@ -672,11 +680,13 @@ messagewindow.style.backgroundColor = "white";
         
         var compressoption = document.createElement("DIV");
         compressoption.id="compressoption";
-        compressoption.width="45%";
+        compressoption.width="40%";
+        compressoption.style.margin="12px";
         
         compressoption.innerHTML=`<p>
+  <label for="compress">Create compressed version of image?</label>
 <input type="checkbox" id="compress" name="compress" value="compress" checked>
-    <label for="compress">Create compressed version?</label>
+  
 </p>
 `;
         
@@ -713,13 +723,16 @@ transinput.placeholder = "Paste transcription here";
            getMsgWindow.appendChild(urldiv);
          getMsgWindow.appendChild(licencediv);
         
+        getMsgWindow.appendChild(creditdiv);
+        
+        
        // getMsgWindow.appendChild(langdrop);
         
          getMsgWindow.appendChild(transcriptiondiv);
         
          getMsgWindow.appendChild(optionsdiv);
         
-        
+         
         
         
         
