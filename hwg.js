@@ -19,7 +19,7 @@ function initMeta(){
 //alert("hello world");
   
   
-  
+  let tagsArray = ["19th century","20th century"];
  
   
   if (window.File && window.FileReader && window.FileList && window.Blob) {
@@ -298,14 +298,14 @@ messagewindow.style.backgroundColor = "white";
     //for (var i = 0, f; f = files[i]; i++) {
       output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
                   f.size, ' bytes, last modified: ',
-                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString('en-GB') : 'n/a',
                   '</li>');
       
       
       
       var thisfilename = f.name;
       var thisurl = window.location.href;
-      var thisfiledate =  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a';
+      var thisfiledate =  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString('en-GB') : 'n/a';
       
       console.log("info: "+thisfilename, thisurl, thisfiledate);
       
@@ -732,6 +732,28 @@ transinput.rows = "10";
 transinput.placeholder = "Paste transcription here";
         
         transcriptiondiv.append(transinput);
+        
+        
+        
+        /*
+        
+        ADD TAGS
+        
+        */
+        
+         var tagsdiv = document.createElement("DIV");
+        tagsdiv.id = "tagsdiv";
+       tagsdiv.style.display ="flex";
+        
+         tagsdiv.style.flexWrap = "wrap";
+        
+        
+        const tags = tagsArray.map(x => "<button id={x}>{x}");
+        console.log(tags);
+        
+        
+        
+        
         
         
         
