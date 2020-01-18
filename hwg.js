@@ -384,9 +384,9 @@ messagewindow.style.backgroundColor = "white";
          var timediv = document.createElement("DIV");
         timediv.id = "timediv";
         
-        timediv.innerHTML = `<label classname="inputlab" for="inputtime" name="inputtime">Time created</label>
-<input type="text" id="inputtime" value=${thisfiledate}>
-`;
+        timediv.innerHTML = `<label classname="inputlab" for="inputtime" name="inputtime" value="inputtime">Time created</label>
+        <input type="text" id="inputtime" value="datetime">
+        `;
         
         
         
