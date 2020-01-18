@@ -748,7 +748,7 @@ transinput.placeholder = "Paste transcription here";
          tagsdiv.style.flexWrap = "wrap";
         
         
-        const tags = tagsArray.map(x => `<button id={x}>{x}`);
+        const tags = tagsArray.map(x => `<button id=${x}>${x}`);
         console.log(tags);
         
         
