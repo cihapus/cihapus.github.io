@@ -378,6 +378,19 @@ messagewindow.style.backgroundColor = "white";
         urldiv.appendChild(inputurl);
         
         
+        
+        //time created
+        
+         var timediv = document.createElement("DIV");
+        timediv.id = "timediv";
+        
+        timediv.innerHTML = `<label classname="inputlab" for="inputtime" name="inputtime">Time created</label>
+<input type="text" id="inputtime" value=${thisfiledate}>
+`;
+        
+        
+        
+        
          //licence input
         
            var licencediv = document.createElement("DIV");
@@ -728,6 +741,9 @@ transinput.placeholder = "Paste transcription here";
         var getMsgWindow = document.getElementById("submitmeta");
         getMsgWindow.appendChild(filenamediv);
            getMsgWindow.appendChild(urldiv);
+        
+           getMsgWindow.appendChild(timediv);
+        
          getMsgWindow.appendChild(licencediv);
         
         getMsgWindow.appendChild(creditdiv);
