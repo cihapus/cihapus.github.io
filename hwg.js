@@ -773,13 +773,14 @@ transinput.placeholder = "Paste transcription here";
         const tags = tagsArray.map(x => `<button id=${x.replace(/ /g, '%20')} class="tagbutton">${x}</button>`);
         console.log(tags);
         
-        tagsdiv.innerHTML = "<p>Tags:</p><hr>"+tags.join("");
+        tagsdiv.innerHTML = "<p style='width:100%'>Tags:</p><hr>"+tags.join("");
         
         
         
         var notesdiv = document.createElement("DIV");
         notesdiv.id = "notesdiv";
        notesdiv.style.display ="flex";
+        notesdiv.style.margin ="20px";
         
         notesdiv.innerHTML=`<textarea name="notesinput" id="notesinput" cols="100" rows="10" placeholder="notes...">
 </textarea>
