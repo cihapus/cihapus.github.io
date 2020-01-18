@@ -773,7 +773,7 @@ transinput.placeholder = "Paste transcription here";
         const tags = tagsArray.map(x => `<button id=${x.replace(/ /g, '%20')} class="tagbutton">${x}</button>`);
         console.log(tags);
         
-        tagsdiv.innerHTML = tags.join("");
+        tagsdiv.innerHTML = "<p>Tags:</p>"+tags.join("");
         
         
         
@@ -785,11 +785,16 @@ transinput.placeholder = "Paste transcription here";
 </textarea>
 `;
         
+         var submitdiv = document.createElement("DIV");
+        submitdiv.id = "submitdiv";
+        submitdiv.margin="0 auto";
+        submitdiv.width="100%";
         
-        
+       submitdiv.innerHTML=`<button id="submit" name="submit" value="submit">
+        Submit Meta
+</button>
+  `;
        
-        
-        
         
         
         
@@ -814,7 +819,7 @@ transinput.placeholder = "Paste transcription here";
          getMsgWindow.appendChild(tagsdiv);
          getMsgWindow.appendChild(notesdiv);
         
-        
+          getMsgWindow.appendChild(submitdiv);
         
         var gettags = document.querySelectorAll('.tagbutton');
         
@@ -828,7 +833,24 @@ transinput.placeholder = "Paste transcription here";
         }
         
         
+        var getsubmit = document.getElementById('submit');
         
+         getsubmit.style.backgroundColor="#90EE90";
+        getsubmit.style.margin ="14px";
+        getsubmit.style.border="0";
+        getsubmit.style.borderRadius="10px";
+        getsubmit.style.maxWidth = "30%";
+        
+        getsubmit.addEventListener('click', handleSubmit);
+        
+        
+        
+        
+        
+        
+        function handleSubmit(e){
+        console.log("meta submitted");
+        }
         
         
         
