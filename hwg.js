@@ -385,7 +385,7 @@ messagewindow.style.backgroundColor = "white";
         timediv.id = "timediv";
         
         timediv.innerHTML = `<label classname="inputlab" for="inputtime" name="inputtime" value="inputtime">Time created</label>
-        <input type="text" id="inputtime" value="datetime">
+        <input type="text" id="inputtime" value=${thisfiledate}>
         `;
         
         
