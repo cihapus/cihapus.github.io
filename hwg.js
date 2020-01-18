@@ -19,7 +19,29 @@ function initMeta(){
 //alert("hello world");
   
   
-  let tagsArray = ["19th century","20th century"];
+  let tagsArray = ["1st century",
+                   "2nd century",
+                   "3rd century",
+                   "4th century",
+                   "5th century",
+                   "6th century",
+                   "7th century", 
+                   "8th century", 
+                   "9th century", 
+                   "10th century", 
+                   "11th century", 
+                   "12th century", 
+                   "13th century", 
+                   "14th century", 
+                   "15th century", 
+                   "16th century", 
+                   "17th century", 
+                   "18th century",
+                   "19th century",
+                   "20th century"];
+  
+  
+  
  
   
   if (window.File && window.FileReader && window.FileList && window.Blob) {
@@ -748,7 +770,7 @@ transinput.placeholder = "Paste transcription here";
          tagsdiv.style.flexWrap = "wrap";
         
         
-        const tags = tagsArray.map(x => `<button id=${x} class="tagbutton">${x}</button>`);
+        const tags = tagsArray.map(x => `<button id=${x.replace(/ /g, '%20')} class="tagbutton">${x}</button>`);
         console.log(tags);
         
         tagsdiv.innerHTML = tags;
