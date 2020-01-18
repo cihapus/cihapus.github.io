@@ -773,7 +773,7 @@ transinput.placeholder = "Paste transcription here";
         const tags = tagsArray.map(x => `<button id=${x.replace(/ /g, '%20')} class="tagbutton">${x}</button>`);
         console.log(tags);
         
-        tagsdiv.innerHTML = tags;
+        tagsdiv.innerHTML = tags.join("");
         
         
         
@@ -781,9 +781,13 @@ transinput.placeholder = "Paste transcription here";
         notesdiv.id = "notesdiv";
        notesdiv.style.display ="flex";
         
-        notesdiv.innerHTML=`<input type="textarea" value="notes..." id="notesinput">
+        notesdiv.innerHTML=`<textarea name="notesinput" id="notesinput" cols="100" rows="10" placeholder="notes...">
+</textarea>
 `;
         
+        
+        
+       
         
         
         
@@ -819,7 +823,8 @@ transinput.placeholder = "Paste transcription here";
           var thistag = gettags[i];
           thistag.addEventListener('click', handleTagButtons);
           thistag.style.backgroundColor="white";
-        
+        thistag.style.border="1px solid #eee";
+          thistag.style.margin="4px";
         }
         
         
@@ -829,7 +834,8 @@ transinput.placeholder = "Paste transcription here";
         
         function handleTagButtons(e){
           
-          var thisclicked = e.target.id;
+          //var thisclicked = e.target.id;
+          var thisclicked = e.target;
           
           if(!thisclicked){return};
           
