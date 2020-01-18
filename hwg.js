@@ -777,6 +777,15 @@ transinput.placeholder = "Paste transcription here";
         
         
         
+        var notesdiv = document.createElement("DIV");
+        notesdiv.id = "notesdiv";
+       notesdiv.style.display ="flex";
+        
+        notesdiv.innerHTML=`<input type="textarea" value="notes..." id="notesinput">
+`;
+        
+        
+        
         
         
         
@@ -799,7 +808,7 @@ transinput.placeholder = "Paste transcription here";
         
          getMsgWindow.appendChild(optionsdiv);
          getMsgWindow.appendChild(tagsdiv);
-         
+         getMsgWindow.appendChild(notesdiv);
         
         
         
@@ -809,11 +818,32 @@ transinput.placeholder = "Paste transcription here";
         
           var thistag = gettags[i];
           thistag.addEventListener('click', handleTagButtons);
+          thistag.style.backgroundColor="white";
         
         }
         
+        
+        
+        
+        
+        
         function handleTagButtons(e){
+          
           var thisclicked = e.target.id;
+          
+          if(!thisclicked){return};
+          
+         if(thisclicked.classList.contains('selected')){
+           thisclicked.classList.remove('selected');
+           thisclicked.style.backgroundColor = "white";
+         }
+          else{
+           thisclicked.classList.add('selected');
+           thisclicked.style.backgroundColor = "#ff8c00";
+          }
+          
+          
+          
           console.log(thisclicked);
         
         }
