@@ -748,10 +748,10 @@ transinput.placeholder = "Paste transcription here";
          tagsdiv.style.flexWrap = "wrap";
         
         
-        const tags = tagsArray.map(x => `<button id=${x}>${x}`);
+        const tags = tagsArray.map(x => `<button id=${x} class="tagbutton">${x}</button>`);
         console.log(tags);
         
-        
+        tagsdiv.innerHTML = tags;
         
         
         
@@ -776,11 +776,25 @@ transinput.placeholder = "Paste transcription here";
          getMsgWindow.appendChild(transcriptiondiv);
         
          getMsgWindow.appendChild(optionsdiv);
-        
+         getMsgWindow.appendChild(tagsdiv);
          
         
         
         
+        var gettags = document.querySelectorAll('.tagbutton');
+        
+        for(let i=0;i<gettags.length;i++){
+        
+          var thistag = gettags[i];
+          thistag.addEventListener('click', handleTagButtons);
+        
+        }
+        
+        function handleTagButtons(e){
+          var thisclicked = e.target.id;
+          console.log(thisclicked);
+        
+        }
         
         
          function handleRadioButtonClick(e){
