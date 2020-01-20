@@ -996,18 +996,7 @@ transinput.placeholder = "Paste transcription here";
   
   function handleCompress(file){
   
-    var getfilename = file.name;
-    
-    var breakfile = getfilename.split('.')
-    
-    var fileOrigName = breakfile[0];
-    var fileExt = breakfile[1];
-    
-    var fileNewName = fileOrigName +"-compressed";
-    var thisFileName = fileNewName+"."+fileExt;
-    
-    
-    console.log("old/new filename - "+file.name, thisFileName);
+   
     
   new Compressor(file, {
     convertSize: 1000000,//1MB
@@ -1015,6 +1004,34 @@ transinput.placeholder = "Paste transcription here";
     success(result) {
       //const formData = new FormData();
 console.log("compress success, result and name: " +result+"=="+result.name);
+      
+      
+      //add '-compressed' to filename....
+      
+       var getfilename = result.name;
+    var breakfile = getfilename.split('.')
+    var fileOrigName = breakfile[0];
+    var fileExt = breakfile[1];
+    var fileNewName = fileOrigName +"-compressed";
+    var thisFileName = fileNewName+"."+fileExt;
+    
+    result.name = thisFileName;
+      
+    console.log("old/new filename - "+thisFileName);
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       //result.name +="-compressed";
       saveAs(result);
