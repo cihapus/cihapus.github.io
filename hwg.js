@@ -1002,7 +1002,7 @@ transinput.placeholder = "Paste transcription here";
       //const formData = new FormData();
 console.log("compress success, result and name: " +result+"=="+result.name);
       
-      saveAs(file);
+      saveAs(result);
       
      /* var filename = result.name;
       var textFileAsBlob = new Blob(file, {type:'text/plain'});
