@@ -867,30 +867,43 @@ transinput.placeholder = "Paste transcription here";
           let hwgfilename = document.getElementById('filename').value;
             let hwgurlname = document.getElementById('urlinput').value;
             let hwgtimename = document.getElementById('inputtime').value;
-          
-            let hwglicenses = document.querySelectorAll('.radioinputbox');
-          
-          
             let hwgcreditname = document.getElementById('creditinput').value;
-          
             let hwglangname = document.getElementById('selectlanguage').value;
           let hwgcompress = document.getElementById('compress').value;
            let hwgtranscription = document.getElementById('transcriptioninput').value;
-          
-            let hwgtags = document.querySelectorAll('.tagbutton');
               let hwgnotes = document.getElementById('notesinput').value;
+          
+          let hwglicences = document.querySelectorAll('.radioinputbox');
+           let hwgtags = document.querySelectorAll('.tagbutton');
+          
+          var checkedtags = [];
+          for(let i=0;i<hwgtags.length;i++){
+          if(hwgtags[i].classList.contains("selected")){
+            checkedtags.push(hwgtags[i])
+          }
+          }
+          
+          for(let j=0;j<hwglicences.length;j++){
+          if(hwglicences[j].checked){
+          var hwglicence = hwglicence[j];
+                                        break;
+          }
+          } 
+          
+          
+          
           
           
           
           console.log(`Meta inputs: 
           hwgfilename=${hwgfilename}
 hwgurlname=${hwgurlname}
-hwglicenses=${hwglicenses}
+hwglicences=${hwglicence}
 hwgcreditname=${hwgcreditname}
           hwglangname=${hwglangname}
           hwgcompress=${hwgcompress}
           hwgtranscription=${hwgtranscription}
-          hwgtags=${hwgtags}
+          hwgtags=${checkedtags}
 hwgnotes=${hwgnotes}
 `);
 
