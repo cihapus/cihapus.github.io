@@ -752,6 +752,7 @@ messagewindow.style.backgroundColor = "white";
         
         var transinput = document.createElement("textarea");
 transinput.name = "transcriptioninput";
+        transinput.id="transcriptioninput";
 //transinput.maxLength = "5000";
 transinput.cols = "100";
 transinput.rows = "10";
@@ -857,7 +858,45 @@ transinput.placeholder = "Paste transcription here";
         
         function handleSubmit(e){
         console.log("meta submitted");
-        }
+          
+          
+          /*get all the necessary input data*/
+          
+          
+          
+          let hwgfilename = document.getElementById('filename').value;
+            let hwgurlname = document.getElementById('urlinput').value;
+            let hwgtimename = document.getElementById('inputtime').value;
+          
+            let hwglicenses = document.querySelectorAll('.radioinputbox');
+          
+          
+            let hwgcreditname = document.getElementById('creditinput').value;
+          
+            let hwglangname = document.getElementById('selectlanguage').value;
+          let hwgcompress = document.getElementById('compress').value;
+           let hwgtranscription = document.getElementById('transcriptioninput').value;
+          
+            let hwgtags = document.querySelectorAll('.tagbutton');
+              let hwgnotes = document.getElementById('notesinput').value;
+          
+          
+          
+          console.log(`Meta inputs: 
+          hwgfilename=${hwgfilename}
+hwgurlname=${hwgurlname}
+hwglicenses=${hwglicenses}
+hwgcreditname=${hwgcreditname}
+          hwglangname=${hwglangname}
+          hwgcompress=${hwgcompress}
+          hwgtranscription=${hwgtranscription}
+          hwgtags=${hwgtags}
+hwgnotes=${hwgnotes}
+`);
+
+
+
+        }//handlesubmit
         
         
         
@@ -972,10 +1011,18 @@ transinput.placeholder = "Paste transcription here";
   }
         
         
+        
+        
+        
+        
+        
         //call this if compress files box is checked... 
-        handleCompress(f);
-      //handleCompress(files[i]);
       
+        
+        
+        
+       // handleCompress(f);
+    
         
         
     //}//for loop to look through files
