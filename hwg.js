@@ -997,6 +997,7 @@ transinput.placeholder = "Paste transcription here";
   function handleCompress(file){
   
   new Compressor(file, {
+    convertSize: 1000000,//1MB
     quality: 0.6,
     success(result) {
       //const formData = new FormData();
