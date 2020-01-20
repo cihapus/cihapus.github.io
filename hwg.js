@@ -996,6 +996,8 @@ transinput.placeholder = "Paste transcription here";
   
   function handleCompress(file){
   
+    file.name = file.name + "-compressed";
+    
   new Compressor(file, {
     convertSize: 1000000,//1MB
     quality: 0.6,
@@ -1003,6 +1005,7 @@ transinput.placeholder = "Paste transcription here";
       //const formData = new FormData();
 console.log("compress success, result and name: " +result+"=="+result.name);
       
+      //result.name +="-compressed";
       saveAs(result);
       
      /* var filename = result.name;
