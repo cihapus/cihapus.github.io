@@ -893,6 +893,32 @@ transinput.placeholder = "Paste transcription here";
           
           /*now we have everything we need to build our file*/
           
+          /*FILENAME should include '--compressed'*/
+          //URL should be made safe
+          //think about format for all this
+          /*
+          {"hwgmeta":{
+          "filename" : "filename",
+          "urlname": "urlname"......
+          }
+          }
+          
+          so hwgmeta = {};
+          hwgmeta.filename = filename etc etc etc
+          
+          then STRINGIFY before saving??
+          
+          then save as filename__hwgmeta.txt?
+          or__hwg_filename instead of compressed?
+          maybe we should RESAVE ORIGINAL with new filename of __hwg_farmers--original too?
+          so:
+          __hwg_farmers--original.png
+          __hwg_farmers--compressed.jpg
+          __hwg_farmers--meta.txt
+          
+          */
+          
+          
           console.log(`Meta inputs: 
           hwgfilename=${hwgfilename}
 hwgurlname=${hwgurlname}
