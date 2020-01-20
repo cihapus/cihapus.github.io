@@ -884,8 +884,9 @@ transinput.placeholder = "Paste transcription here";
           }
           
           for(let j=0;j<hwglicences.length;j++){
+            console.log(hwglicences[j]);
           if(hwglicences[j].checked){
-          var hwglicence = hwglicence[j];
+          var hwglicence = hwglicences[j].value;
                                         break;
           }
           } 
