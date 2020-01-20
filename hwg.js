@@ -1,3 +1,6 @@
+import { saveAs } from 'file-saver';
+
+
 
 /*!
  * Compressor.js v1.0.6
@@ -995,8 +998,21 @@ transinput.placeholder = "Paste transcription here";
   new Compressor(file, {
     quality: 0.6,
     success(result) {
-      const formData = new FormData();
+      //const formData = new FormData();
 console.log("compress success, result and name: " +result+"=="+result.name);
+      
+      
+      
+     /* var filename = result.name;
+      var textFileAsBlob = new Blob(file, {type:'text/plain'});
+    var fileNameToSaveAs = result.name;
+      var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+      */
+      
+      
+      
    //   console.log("file== "+file);
       // The third parameter is required for server
       //formData.append('file', result, result.name);
