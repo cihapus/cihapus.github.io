@@ -879,7 +879,7 @@ transinput.placeholder = "Paste transcription here";
           var checkedtags = [];
           for(let i=0;i<hwgtags.length;i++){
           if(hwgtags[i].classList.contains("selected")){
-            checkedtags.push(hwgtags[i])
+            checkedtags.push(hwgtags[i].id)
           }
           }
           
@@ -891,10 +891,7 @@ transinput.placeholder = "Paste transcription here";
           }
           } 
           
-          
-          
-          
-          
+          /*now we have everything we need to build our file*/
           
           console.log(`Meta inputs: 
           hwgfilename=${hwgfilename}
@@ -909,6 +906,10 @@ hwgnotes=${hwgnotes}
 `);
 
 
+          
+          /*call compressfile if compress is checked*/
+          
+          
 
         }//handlesubmit
         
