@@ -1,5 +1,6 @@
 //import 'React' from './react.js'
-import * as React from "https://unpkg.com/react@16/umd/react.development.js";
+//import * as React from "https://unpkg.com/react@16/umd/react.development.js";
+import * as React from "https://unpkg.com/react@16.12.0/umd/react.production.min.js";
 
 console.log("v1");
 
