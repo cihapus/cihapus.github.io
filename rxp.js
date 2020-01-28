@@ -11,9 +11,11 @@ import {init} from './init.js';
     script.type='text/javascript';
     //real browsers
     script.onload=trythis();
+script.async =false;
     //Internet explorer
     script.onreadystatechange = function() {
         if (this.readyState == 'complete') {
+            console.log("script1 onreadystate");
             trythis();
         }
     }
@@ -34,8 +36,12 @@ function trythis(){
     var script2=document.createElement('script');
     script2.src="https://unpkg.com/react-dom@16/umd/react-dom.development.js";
     script2.type='text/javascript';
+    script2.async =false;
+    
+    script2.addEventListener("load", function(){console.log("script2 loaded")});
+    
     //real browsers
-    script2.onload=trythistoo();
+    //script2.onload=trythistoo();
      head.appendChild(script2);
 
 
