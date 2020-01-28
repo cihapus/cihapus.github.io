@@ -1,12 +1,15 @@
+//this is called by rxp when react and reactdom have loaded
+//need babel.js as well for jsx
+
 function init(){
 
 console.log("logging from init");
-  console.log("react here is "+window.React);
+  //console.log("react here is "+window.React);
   
-  const React = window.React;
-  const ReactDOM = window.ReactDOM;
+  //const React = window.React;
+  //const ReactDOM = window.ReactDOM;
   
-  console.log(React, ReactDOM);
+  //console.log(React, ReactDOM);
   
   var test = document.createElement("div");
   test.id="testinit";
