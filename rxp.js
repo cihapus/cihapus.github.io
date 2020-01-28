@@ -4,7 +4,6 @@
 var test = document.createElement('div');
 test.id = "testing";
 test.innerHTML = "<h1>Hello world</h1>";
-var attachto = document.body;
-attachto.appendChild(test);
 
+document.body.appendChild(test);
 //reactDOM.render(<h2>hello from react</h2>, document.getElementById('testing'));
