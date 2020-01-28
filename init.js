@@ -9,11 +9,39 @@ console.log("logging from init");
   console.log(React, ReactDOM);
   
   var test = document.createElement("div");
-  test.id="testing";
-  test.innerHTML="<h1>hello world</h1>";
+  test.id="testinit";
+  test.innerHTML="<h1>hello world from init</h1>";
   document.body.appendChild(test);
   
- ReactDOM.render("<h2>hello from react</h2>", document.getElementById('testing'));
+// ReactDOM.render("<h2>hello from react</h2>", document.getElementById('testinit'));
+  
+  const e = React.createElement;
+
+class LikeButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { liked: false };
+  }
+
+  render() {
+    if (this.state.liked) {
+      return 'You liked this.';
+    }
+
+    return e(
+      'button',
+      { onClick: () => this.setState({ liked: true }) },
+      'Like'
+    );
+  }
+}
+
+const domContainer = document.getElementById("testinit");
+ReactDOM.render(e(LikeButton), domContainer);
+  
+  
+  
+  
   
 
 }
