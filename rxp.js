@@ -1,4 +1,8 @@
-import 'React' from './react.js'
+//import 'React' from './react.js'
+import * as module from "https://unpkg.com/react@16/umd/react.development.js";
+
+
+
 //import 'ReactDOM' from './react-dom.js'
 
 var test = document.createElement('div');
