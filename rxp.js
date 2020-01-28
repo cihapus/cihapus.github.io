@@ -67,7 +67,7 @@ document.body.appendChild(test);
     
     
     
-    /*const e = React.createElement;
+    const e = React.createElement;
 
 class LikeButton extends React.Component {
   constructor(props) {
@@ -92,7 +92,7 @@ class LikeButton extends React.Component {
     
     const domContainer = document.getElementById("testing");
 ReactDOM.render(e(LikeButton), domContainer);
-    */
+    
     
     
     
