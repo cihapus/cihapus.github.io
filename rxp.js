@@ -2,6 +2,7 @@
 //import * as React from "https://unpkg.com/react@16/umd/react.development.js";
 //import * as React from "https://unpkg.com/react@16.12.0/umd/react.production.min.js";
 
+import {init} from './init.js';
 
 
     var head=document.getElementsByTagName("head")[0];
@@ -23,6 +24,7 @@
 function trythis(){
 
   console.log("scripts loaded");
+    init();
 
 }
 
