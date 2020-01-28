@@ -10,15 +10,23 @@ import {init} from './init.js';
     script.src="https://unpkg.com/react@16/umd/react.development.js";
     script.type='text/javascript';
     //real browsers
-    script.onload=trythis();
+   // script.onload=trythis();
 script.async =false;
+
+script.addEventListener("load", function(){
+    console.log("script1 loaded");
+    trythis();
+});
+
+
     //Internet explorer
-    script.onreadystatechange = function() {
+    /*script.onreadystatechange = function() {
         if (this.readyState == 'complete') {
             console.log("script1 onreadystate");
             trythis();
         }
     }
+    */
     head.appendChild(script);
 
 
