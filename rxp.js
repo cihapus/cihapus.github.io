@@ -46,7 +46,10 @@ function trythis(){
     script2.type='text/javascript';
     script2.async =false;
     
-    script2.addEventListener("load", function(){console.log("script2 loaded")});
+    script2.addEventListener("load", function(){
+        console.log("script2 loaded");
+    trythistoo();
+    });
     
     //real browsers
     //script2.onload=trythistoo();
