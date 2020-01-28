@@ -32,7 +32,7 @@ function trythis(){
     
       var head=document.getElementsByTagName("head")[0];
     var script2=document.createElement('script');
-    script2.src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js";
+    script2.src="https://unpkg.com/react-dom@16/umd/react-dom.development.js";
     script2.type='text/javascript';
     //real browsers
     script2.onload=trythistoo();
