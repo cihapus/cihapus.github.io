@@ -1,4 +1,4 @@
-//import 'React' from './react.js'
+import 'React' from './react.js'
 //import 'ReactDOM' from './react-dom.js'
 
 var test = document.createElement('div');
