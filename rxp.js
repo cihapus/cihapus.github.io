@@ -24,6 +24,10 @@ import {init} from './init.js';
 function trythis(){
 
   console.log("scripts loaded");
+    
+    ReactDOM.render("react test", document.body);
+    
+    
     init();
 
 }
