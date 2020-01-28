@@ -68,8 +68,10 @@ test.innerHTML="<h1>hello world</h1>";
 document.body.appendChild(test);
 
     
+    init();
     
     
+    /*
     const e = React.createElement;
 
 class LikeButton extends React.Component {
@@ -90,12 +92,10 @@ class LikeButton extends React.Component {
     );
   }
 }
-    
-    
-    
-    const domContainer = document.getElementById("testing");
+
+const domContainer = document.getElementById("testing");
 ReactDOM.render(e(LikeButton), domContainer);
-    
+    */
     
     
     
