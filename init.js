@@ -1,6 +1,10 @@
 function init(){
 
 console.log("logging from init");
+  const React = window.React;
+  const ReactDOM = window.ReactDOM;
+  
+  console.log(React, ReactDOM);
   
   var test = document.createElement("div");
   test.id="testing";
