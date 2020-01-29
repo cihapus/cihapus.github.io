@@ -9,46 +9,13 @@ var scripts=["https://unpkg.com/react@16/umd/react.development.js",
 
 var head=document.getElementsByTagName("head")[0];
 
-var scriptElements=[];
-var scriptCount = 0;
-var totalScripts = scripts.length;
-
-for(let i=0;i<scripts.length;i++){
-
-		var script = document.createElement('script');
-		  script.src = scripts[i];
-		  script.async = false;
-		  script.type='text/javascript';
-	
-	
-	
-	if(i!=scripts.length-1){
-		 scriptElements[i].addEventListener('load', function(){
-		  head.appendChild(scriptElements[i+1]);
-		 });
-		
-	}
-	else{
-	scriptElements[i].addEventListener('load', function(){
-		 init();
-	});
-	}
-	
-	scriptElements.push(script);
-
-}
-
- head.appendChild(scriptElements[0]);
-
-
-/*
+//builds script tags for each script needed
 scripts.forEach(function(src) {
 		  var script = document.createElement('script');
 		  script.src = src;
 		  script.async = false;
 		  script.type='text/javascript';
          	
-	
 		scriptElements.push(script);
 		});
 
@@ -77,7 +44,6 @@ scriptElements[0].addEventListener('load', function(){
 
 //fires the script loading loop
 head.appendChild(scriptElements[0]);
-*/
 
 		
 		
