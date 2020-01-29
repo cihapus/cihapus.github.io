@@ -9,7 +9,11 @@ var scripts=["https://unpkg.com/react@16/umd/react.development.js",
 
 var head=document.getElementsByTagName("head")[0];
 
+
 //builds script tags for each script needed
+
+var scriptElements = [];
+
 scripts.forEach(function(src) {
 		  var script = document.createElement('script');
 		  script.src = src;
