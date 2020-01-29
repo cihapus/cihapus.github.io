@@ -5,12 +5,56 @@
 import {init} from './init.js';
 
 
+var scripts=["https://unpkg.com/react@16/umd/react.development.js",
+"https://unpkg.com/react-dom@16/umd/react-dom.development.js",
+    "https://unpkg.com/babel-standalone@6/babel.min.js"];
+
+var head=document.getElementsByTagName("head")[0];
+
+var scriptElements=[];
+scripts.forEach(function(src) {
+		  var script = document.createElement('script');
+		  script.src = src;
+		  script.async = false;
+		  script.type='text/javascript';
+          scriptElements.push(script);
+		});
+
+
+scriptElements[0].addEventListener('load', function(){
+   console.log("script 0 loaded");
+    head.appendChild(scriptElements[1]);
+     scriptElements[1].addEventListener('load', function(){
+         console.log("script 1 loaded");
+     head.appendChild(scriptElements[2]);
+          scriptElements[2].addEventListener('load', function(){
+              console.log("script 2 loaded");
+              
+              console.log("react is "+window.React, window.ReactDOM);
+    
+    var test = document.createElement('div');
+test.id = "testing";
+test.innerHTML="<h1>hello world</h1>";
+document.body.appendChild(test);
+              
+              
+              
+              init();
+          });//element2
+     });//element1
+});//element0
+
+
+head.appendChild(scriptElements[0]);
+
+
+
+/*
     var head=document.getElementsByTagName("head")[0];
     var script=document.createElement('script');
     script.src="https://unpkg.com/react@16/umd/react.development.js";
     script.type='text/javascript';
-    //real browsers
-   // script.onload=trythis();
+   
 script.async =false;
 
 script.addEventListener("load", function(){
@@ -19,14 +63,7 @@ script.addEventListener("load", function(){
 });
 
 
-    //Internet explorer
-    /*script.onreadystatechange = function() {
-        if (this.readyState == 'complete') {
-            console.log("script1 onreadystate");
-            trythis();
-        }
-    }
-    */
+   
     head.appendChild(script);
 
 
@@ -34,11 +71,6 @@ script.addEventListener("load", function(){
 function trythis(){
 
   console.log("first script loaded");
-    
-   // ReactDOM.render("react test", document.body);
-    
-    
-    //init();
     
       var head=document.getElementsByTagName("head")[0];
     var script2=document.createElement('script');
@@ -51,8 +83,6 @@ function trythis(){
     trythistoo();
     });
     
-    //real browsers
-    //script2.onload=trythistoo();
      head.appendChild(script2);
 
 
@@ -68,56 +98,7 @@ test.innerHTML="<h1>hello world</h1>";
 document.body.appendChild(test);
 
     
-    init();
-    
-    
-    /*
-    const e = React.createElement;
-
-class LikeButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { liked: false };
-  }
-
-  render() {
-    if (this.state.liked) {
-      return 'You liked this.';
-    }
-
-    return e(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
-    );
-  }
-}
-
-const domContainer = document.getElementById("testing");
-ReactDOM.render(e(LikeButton), domContainer);
-    */
-    
-    
-    
-    
-//ReactDOM.render(<h2>hello from react</h2>, document.getElementById('testing'));    
+    init();  
     
 }
-
-//console.log("v1");
-
-
-//import 'ReactDOM' from './react-dom.js'
-
-//var test = document.createElement('div');
-//test.id = "testing";
-//test.innerHTML="<h1>hello world</h1>";
-//document.body.appendChild(test);
-
-
-
-//test.innerHTML = `<script src='https://unpkg.com/react@16/umd/react.development.js'></script>
-//<script src='https://unpkg.com/react@16.12.0/umd/react.production.min.js'></script>`;
-
-//document.body.appendChild(test);
-//reactDOM.render(<h2>hello from react</h2>, document.getElementById('testing'));
+*/
