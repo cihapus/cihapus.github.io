@@ -16,7 +16,7 @@ var totalScripts = scripts.length;
 for(let i=0;i<scripts.length;i++){
 
 		var script = document.createElement('script');
-		  script.src = src;
+		  script.src = scripts[i];
 		  script.async = false;
 		  script.type='text/javascript';
 	
@@ -33,9 +33,12 @@ for(let i=0;i<scripts.length;i++){
 		 init();
 	});
 	}
-	 head.appendChild(scriptElements[i]);
+	
+	scriptElements.push(script);
 
 }
+
+ head.appendChild(scriptElements[0]);
 
 
 /*
