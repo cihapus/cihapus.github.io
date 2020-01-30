@@ -16,7 +16,7 @@ console.log("logging from init");
  
  function createMarkup(data) {
     return `
-        <div id=${data.id} class=${data.class} style=${data.styles}>
+        <div id="${data.id}" class="${data.class}" style="${data.styles}">
             ${data.content}
         <div>
     `
@@ -33,8 +33,10 @@ const PopupElement = {
  
  
  var testDiv = createMarkup(PopupElement);
+ console.log("testdiv is: "+testDiv);
+ var tester = `<h1>hello world backticks</h1>`;
  
- document.body.appendChild(testDiv);
+ document.body.appendChild(tester);
  
  
  /*
