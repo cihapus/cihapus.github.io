@@ -15,11 +15,19 @@ console.log("logging from init");
  
  
  function createMarkup(data) {
-    return `
+  var divelement = document.createElement("div");
+  divelement.id = data.id;
+  divelement.class = data.class;
+  divelement.style = data.styles;
+  divelement.innerHTML = data.content;
+  return divelement;
+   
+  /*return `
         <div id="${data.id}" class="${data.class}" style="${data.styles}">
             ${data.content}
         <div>
     `
+*/
 }
  
  
@@ -27,16 +35,15 @@ const PopupElement = {
      "id" : "testinit",
  "class" : "testclass",
  "styles" : null,
- "content" : "hello world from object?"
+ "content" : "<p>hello world from object?</p>"
 
 }
  
  
  var testDiv = createMarkup(PopupElement);
  console.log("testdiv is: "+testDiv);
- var tester = `<h1>hello world backticks</h1>`;
- 
- document.body.appendChild(tester);
+
+ document.body.appendChild(testDiv);
  
  
  /*
