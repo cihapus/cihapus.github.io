@@ -12,10 +12,40 @@ console.log("logging from init");
   const e = React.createElement;
  
  
+ 
+ 
+ function createMarkup(data) {
+    return `
+        <div id=${data.id} class=${data.class} style=${data.styles}>
+            ${data.content}
+        <div>
+    `
+}
+ 
+ 
+const PopupElement = {
+     "id" : "testinit",
+ "class" : "testclass",
+ "styles" : null,
+ "content" : "hello world from object?"
+
+}
+ 
+ 
+ var testDiv = createMarkup(PopupElement);
+ 
+ document.body.appendChild(testDiv);
+ 
+ 
+ /*
   var test = document.createElement("div");
   test.id="testinit";
   test.innerHTML="<h1>hello world from init</h1>";
   document.body.appendChild(test);
+ */
+ 
+ 
+ 
   
 // ReactDOM.render("<h2>hello from react</h2>", document.getElementById('testinit'));
   
@@ -36,7 +66,7 @@ class SubmitForm extends React.Component {
  }//submitformclass
  
  
- const domContainer = document.body;
+ const domContainer = document.getElementById('testinit');
 ReactDOM.render(e(SubmitForm), domContainer);
   
  
