@@ -19,19 +19,20 @@ console.log("logging from init");
   
 // ReactDOM.render("<h2>hello from react</h2>", document.getElementById('testinit'));
   
- class SubmitForm extends React.Component {
+class SubmitForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { liked: false };
   }
   
-  render() {}
+  render() {
   
   return e(
       'div',
       null,
       'Hello world from react'
     );
+  }//render
  }//submitformclass
  
  
