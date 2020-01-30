@@ -29,12 +29,9 @@ console.log("logging from init");
   
   return e(
       'div',
-      { id: "testreact" },
-      [e('h1',null,'Hello world from react')]
+      null,
+      'Hello world from react'
     );
-  
-  
-  
  }//submitformclass
  
  
@@ -73,9 +70,6 @@ class LikeButton extends React.Component {
   
   
   
-  
-  
-
-}
+}//init
 
 export {init};
