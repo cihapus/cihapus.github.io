@@ -32,8 +32,6 @@ console.log("logging from init");
       { id: "testreact" },
       [e('h1',null,'Hello world from react')]
     );
-  }
-  
   
   
   
