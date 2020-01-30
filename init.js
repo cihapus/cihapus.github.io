@@ -1,7 +1,7 @@
 //this is called by rxp when react and reactdom have loaded
 //need babel.js as well for jsx
 
-import {Compressor} from './compressor.js';
+import {Compressor} from './Compressorjs.js';
 
 
 
