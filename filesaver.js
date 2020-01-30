@@ -162,5 +162,8 @@ var saveAs = _global.saveAs || (
 _global.saveAs = saveAs.saveAs = saveAs
 
 if (typeof module !== 'undefined') {
+  console.log("module NOT undefined");
   module.exports = saveAs;
 }
+
+//export {saveAs}
