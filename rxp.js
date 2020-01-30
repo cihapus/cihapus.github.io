@@ -2,10 +2,16 @@
 
 import {init} from './init.js';
 
-//load external scripts in sequence
+//load external scripts in sequence - we're only actually loading two though
+
+
+//var scripts=["https://unpkg.com/react@16/umd/react.development.js",
+//"https://unpkg.com/react-dom@16/umd/react-dom.development.js",
+  //  "https://unpkg.com/babel-standalone@6/babel.min.js"];
+
 var scripts=["https://unpkg.com/react@16/umd/react.development.js",
-"https://unpkg.com/react-dom@16/umd/react-dom.development.js",
-    "https://unpkg.com/babel-standalone@6/babel.min.js"];
+"https://unpkg.com/react-dom@16/umd/react-dom.development.js"];
+
 
 var head=document.getElementsByTagName("head")[0];
 
@@ -30,15 +36,15 @@ scriptElements[0].addEventListener('load', function(){
 	
     	 scriptElements[1].addEventListener('load', function(){
          
-    		 head.appendChild(scriptElements[2]);
+    		// head.appendChild(scriptElements[2]);
 		 
-          		scriptElements[2].addEventListener('load', function(){
+          	//	scriptElements[2].addEventListener('load', function(){
               
     			
               
               		init();
           
-		});//element2
+		//});//element2
      });//element1
 });//element0
 
