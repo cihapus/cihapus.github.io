@@ -34,7 +34,7 @@ console.log("logging from init");
 const PopupElement = {
      "id" : "testinit",
  "class" : "testclass",
- "styles" : "color='red';text-align: center; margin:30px"
+ "styles" : "color='red';text-align: center; margin:30px",
  "content" : "<p>hello world from object?</p>"
 
 }
