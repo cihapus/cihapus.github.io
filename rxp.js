@@ -34,11 +34,7 @@ scriptElements[0].addEventListener('load', function(){
 		 
           		scriptElements[2].addEventListener('load', function(){
               
-    			//test - move to init
-    			var test = document.createElement('div');
-			test.id = "testing";
-			test.innerHTML="<h1>hello world</h1>";
-			document.body.appendChild(test);
+    			
               
               		init();
           
