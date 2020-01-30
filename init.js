@@ -76,7 +76,7 @@ class SubmitForm extends React.Component {
  
  
  const domContainer = document.getElementById('testinit');
-ReactDOM.render(e(SubmitForm), domContainer);
+//ReactDOM.render(e(SubmitForm), domContainer);
   
  
  
