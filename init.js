@@ -2,7 +2,7 @@
 //need babel.js as well for jsx
 
 import Compressor from './Compressorjs.js';
-import { saveAs } from './file-saver.js';
+import * as FileSaver from './file-saver.js';
 
 
 function init(){
