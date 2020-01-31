@@ -50,12 +50,6 @@ max-width:80%;
 }
  
 
-headerbar.id="headerbar";
-  headerbar.style.backgroundColor ="#333";
-  headerbar.style.width ="80%";
-  headerbar.style.textAlign = "center";
-  headerbar.style.margin ="0 auto";
-  headerbar.style.maxWidth ="80%";
 
 
 
