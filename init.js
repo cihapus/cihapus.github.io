@@ -16,10 +16,10 @@ console.log("logging from init");
  
  function createMarkup(data) {
   var divelement = document.createElement(data.type);
-  divelement.id = data.id;
+  divelement.id = data.id ? data.id : null;
   divelement.class = data.class ? data.class : null;
-  divelement.style = data.styles;
-  divelement.innerHTML = data.content;
+  divelement.style = data.styles ? data.styles : null;
+  divelement.innerHTML = data.content ? data.content : null;
   return divelement;
    
   /*return `
@@ -34,11 +34,11 @@ console.log("logging from init");
 const PopupElement = {
    "type" : "div",
      "id" : "testinit",
- //"class" : "testclass",
+ "class" : "testclass",
  "styles" : `color:red; 
 text-align: center; 
 margin:30px`,
- "content" : `<p>hello world from object?</p>`
+ //"content" : `<p>hello world from object?</p>`
 
 }
  
