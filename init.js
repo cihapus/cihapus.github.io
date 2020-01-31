@@ -59,11 +59,26 @@ margin:30px`,
 "content" : `<p>hello world from object?</p>`,
 }
  
+
+const SecondElement = {
+   "type" : "div",
+     "id" : "testtwo",
+ "class" : "testclass",
+ "styles" : `color:blue; 
+text-align: right; 
+margin:30px`,
+"content" : `<p>hello world from second element</p>`,
+}
+
+
+
+
+
  
  var testDiv = createMarkup(PopupElement, null);
-
-
  document.body.appendChild(testDiv);//could render this via react instead I guess?
+ 
+ createMarkUp(SecondElement, "testinit");
  
   
 class SubmitForm extends React.Component {
