@@ -1,8 +1,9 @@
 //this is called by rxp when react and reactdom have loaded
 //need babel.js as well for jsx
 
-import Compressor from './Compressorjs.js';
-import { saveAs } from './filesaver.js';
+import Compressor from './Compressorjs';
+import { saveAs } from './filesaver';
+import { Make } from './MakeElement';
 
 
 function init(){
@@ -13,7 +14,7 @@ console.log("logging from init");
  
  
  
- 
+ /*
  function Make(data, target) {
   
   try{
@@ -47,6 +48,13 @@ console.log("logging from init");
   
   //return divelement;
 }
+ */
+ 
+ 
+ 
+ 
+ 
+ 
  
  
 const PopupElement = {
