@@ -44,11 +44,13 @@ width:80%;
 margin:30px`,
 "content" : `<div id="header" 
 style="background-color: #333; 
+cursor:move;
+padding:30px;
 color : #fff;
-width : 80%; 
+width : 100%; 
 text-align: center; 
 margin: 0 auto; 
-max-width:80%;"
+max-width:100%;"
 >Submit Metadata</div>`,
 }
  
@@ -123,14 +125,14 @@ function drag_over(event) {
 } 
 function drop(event) { 
     var offset = event.dataTransfer.getData("text/plain").split(',');
-    var dm = document.getElementById('submitmeta');
+    var dm = document.getElementById('header');
     dm.style.left = (event.clientX + parseInt(offset[0],10)) + 'px';
     dm.style.top = (event.clientY + parseInt(offset[1],10)) + 'px';
 event.preventDefault();
     return false;
 } 
 
-var dm = document.getElementById('submitmeta'); 
+var dm = document.getElementById('header'); 
 dm.addEventListener('dragstart',drag_start,false); 
 document.body.addEventListener('dragover',drag_over,false); 
 document.body.addEventListener('drop',drop,false);
