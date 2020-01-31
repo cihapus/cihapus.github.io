@@ -20,6 +20,11 @@ console.log("logging from init");
   divelement.class = data.class ? data.class : null;
   divelement.style = data.styles ? data.styles : null;
   divelement.innerHTML = data.content ? data.content : null;
+  
+  
+  //if we included a render target too, we could do appendchild here so it's all in one, rather than returning divelement?
+  
+  
   return divelement;
 }
  
