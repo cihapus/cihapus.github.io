@@ -3,7 +3,7 @@
 
 import Compressor from './Compressorjs.js';
 import { saveAs } from './filesaver.js';
-//import { Make } from './MakeElement.js';
+import { Make } from './MakeElement.js';
 
 
 function init(){
@@ -14,7 +14,7 @@ console.log("logging from init");
  
  
  
- 
+ /*
  function Make(data, target) {
   
   try{
@@ -48,7 +48,7 @@ console.log("logging from init");
   
   //return divelement;
 }
- 
+ */
  
  
  
