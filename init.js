@@ -17,7 +17,7 @@ console.log("logging from init");
  function createMarkup(data) {
   var divelement = document.createElement(data.type);
   divelement.id = data.id;
-  divelement.class = data.class;
+  divelement.class = data.class ? data.class : null;
   divelement.style = data.styles;
   divelement.innerHTML = data.content;
   return divelement;
@@ -34,7 +34,7 @@ console.log("logging from init");
 const PopupElement = {
    "type" : "div",
      "id" : "testinit",
- "class" : "testclass",
+ //"class" : "testclass",
  "styles" : `color:red; 
 text-align: center; 
 margin:30px`,
