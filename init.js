@@ -41,12 +41,14 @@ max-height:600px;
 height:autp;
 width:80%;
 margin:30px`,
-"content" : `<div id="header" style="background-color: #333; 
+"content" : `<div id="header" 
+style="background-color: #333; 
+color : #fff;
 width : 80%; 
 text-align: center; 
 margin: 0 auto; 
-max-width:80%;
-">Submit Metadata</div>`,
+max-width:80%;"
+>Submit Metadata</div>`,
 }
  
 
