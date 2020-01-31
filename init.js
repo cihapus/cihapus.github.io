@@ -14,18 +14,38 @@ console.log("logging from init");
  
  
  
- function createMarkup(data) {
+ function createMarkup(data, target) {
+  
+  try{
   var divelement = document.createElement(data.type);
   divelement.id = data.id ? data.id : null;
   divelement.class = data.class ? data.class : null;
   divelement.style = data.styles ? data.styles : null;
   divelement.innerHTML = data.content ? data.content : null;
+  }
+  catch(err){
+  console.warn("couldn't create element: ",err);
+  }
   
   
-  //if we included a render target too, we could do appendchild here so it's all in one, rather than returning divelement?
+  
+  if(!target){
+  return divelement
+  }
+  else{
+  var container = document.getElementById(target);
+  }
+  
+  if(!container){
+  console.warn("target container element not found in document");
+  return;
+  }
+  else{
+  container.appendChild(divelement);
+  }
   
   
-  return divelement;
+  //return divelement;
 }
  
  
@@ -36,13 +56,12 @@ const PopupElement = {
  "styles" : `color:red; 
 text-align: center; 
 margin:30px`,
-"content" : `<p>hello world from object?</p>`
-
+"content" : `<p>hello world from object?</p>`,
 }
  
  
- var testDiv = createMarkup(PopupElement);
- console.log("testdiv is: "+testDiv);
+ var testDiv = createMarkup(PopupElement, null);
+
 
  document.body.appendChild(testDiv);//could render this via react instead I guess?
  
