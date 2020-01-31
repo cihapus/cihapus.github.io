@@ -14,7 +14,7 @@ console.log("logging from init");
  
  
  
- function createMarkup(data, target) {
+ function Make(data, target) {
   
   try{
   var divelement = document.createElement(data.type);
@@ -75,10 +75,10 @@ margin:30px`,
 
 
  
- var testDiv = createMarkup(PopupElement, null);
+ var testDiv = Make(PopupElement, null);
  document.body.appendChild(testDiv);//could render this via react instead I guess?
  
- createMarkUp(SecondElement, "testinit");
+ Make(SecondElement, "testinit");
  
   
 class SubmitForm extends React.Component {
