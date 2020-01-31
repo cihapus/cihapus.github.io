@@ -21,13 +21,6 @@ console.log("logging from init");
   divelement.style = data.styles ? data.styles : null;
   divelement.innerHTML = data.content ? data.content : null;
   return divelement;
-   
-  /*return `
-        <div id="${data.id}" class="${data.class}" style="${data.styles}">
-            ${data.content}
-        <div>
-    `
-*/
 }
  
  
@@ -38,7 +31,7 @@ const PopupElement = {
  "styles" : `color:red; 
 text-align: center; 
 margin:30px`,
- //"content" : `<p>hello world from object?</p>`
+"content" : `<p>hello world from object?</p>`
 
 }
  
@@ -46,20 +39,8 @@ margin:30px`,
  var testDiv = createMarkup(PopupElement);
  console.log("testdiv is: "+testDiv);
 
- document.body.appendChild(testDiv);
+ document.body.appendChild(testDiv);//could render this via react instead I guess?
  
- 
- /*
-  var test = document.createElement("div");
-  test.id="testinit";
-  test.innerHTML="<h1>hello world from init</h1>";
-  document.body.appendChild(test);
- */
- 
- 
- 
-  
-// ReactDOM.render("<h2>hello from react</h2>", document.getElementById('testinit'));
   
 class SubmitForm extends React.Component {
   constructor(props) {
