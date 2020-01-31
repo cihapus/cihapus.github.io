@@ -13,56 +13,40 @@ console.log("logging from init");
   const e = React.createElement;
  
  
- 
  /*
- function Make(data, target) {
+
   
-  try{
-  var divelement = document.createElement(data.type);
-  divelement.id = data.id ? data.id : null;
-  divelement.class = data.class ? data.class : null;
-  divelement.style = data.styles ? data.styles : null;
-  divelement.innerHTML = data.content ? data.content : null;
-  }
-  catch(err){
-  console.warn("couldn't create element: ",err);
-  }
+
+  messagewindow.style.overflowY = "scroll";
+  messagewindow.style.border="1px solid #333";
   
+  messagewindow.style.boxShadow="10px 20px 10px #333";
   
-  
-  if(!target){
-  return divelement
-  }
-  else{
-  var container = document.getElementById(target);
-  }
-  
-  if(!container){
-  console.warn("target container element not found in document");
-  return;
-  }
-  else{
-  container.appendChild(divelement);
-  }
-  
-  
-  //return divelement;
-}
+   messagewindow.style.resize="both";
+ 
  */
- 
- 
- 
- 
  
  
  
  
 const PopupElement = {
    "type" : "div",
-     "id" : "testinit",
- "class" : "testclass",
- "styles" : `color:red; 
+     "id" : "submitmeta",
+ //"class" : "testclass",
+ "styles" : `color:black;
+background-color: white;
+z-index:999;
+position:absolute;
+top:20px;
+left:10px;
+margin:20px;
+padding:20px;
 text-align: center; 
+min-height:300px;
+min-width:300px;
+max-height:600px;
+height:autp;
+width:80%;
 margin:30px`,
 "content" : `<p>hello world from object?</p>`,
 }
@@ -86,7 +70,7 @@ margin:30px`,
  var testDiv = Make(PopupElement, null);
  document.body.appendChild(testDiv);//could render this via react instead I guess?
  
- Make(SecondElement, "testinit");
+ Make(SecondElement, "submitmeta");
  
   
 class SubmitForm extends React.Component {
@@ -106,7 +90,7 @@ class SubmitForm extends React.Component {
  }//submitformclass
  
  
- const domContainer = document.getElementById('testinit');
+ const domContainer = document.getElementById('submitmeta');
 //ReactDOM.render(e(SubmitForm), domContainer);
   
  
