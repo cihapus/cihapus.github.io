@@ -13,18 +13,6 @@ console.log("logging from init");
   const e = React.createElement;
  
  
- /*
-
-  
-
-  messagewindow.style.overflowY = "scroll";
-  messagewindow.style.border="1px solid #333";
-  
-  messagewindow.style.boxShadow="10px 20px 10px #333";
-  
-   messagewindow.style.resize="both";
- 
- */
  
  
  
@@ -37,6 +25,10 @@ const PopupElement = {
 background-color: white;
 z-index:999;
 position:absolute;
+overflow-y:scroll;
+border: 1px solid #333;
+box-shadow: 10px 20px 10px #333;
+resize: both;
 top:20px;
 left:10px;
 margin:20px;
