@@ -16,7 +16,7 @@ console.log("logging from init");
  
  
  
- 
+//the actual popup window, with a header element
 const PopupElement = {
    "type" : "div",
      "id" : "submitmeta",
@@ -41,9 +41,24 @@ max-height:600px;
 height:autp;
 width:80%;
 margin:30px`,
-"content" : `<p>hello world from object?</p>`,
+"content" : `<div id="header" style="background-color: #333; 
+width : 80%; 
+text-align: center; 
+margin: 0 auto; 
+max-width:80%;
+">Submit Metadata</div>`,
 }
  
+
+headerbar.id="headerbar";
+  headerbar.style.backgroundColor ="#333";
+  headerbar.style.width ="80%";
+  headerbar.style.textAlign = "center";
+  headerbar.style.margin ="0 auto";
+  headerbar.style.maxWidth ="80%";
+
+
+
 
 const SecondElement = {
    "type" : "div",
