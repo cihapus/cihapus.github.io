@@ -29,29 +29,30 @@ position:absolute;
 overflow-y:scroll;
 border: 4px solid #FFFFFF;
 margin: 20px;
-//box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.3),0px 20px 15px 0px rgba(0, 0, 0, 0.6);
 box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.3),0px 20px 10px 0px rgba(0, 0, 0, 0.6);
 resize: both;
-top:20px;
+top:10px;
 left:10px;
 padding:20px;
 text-align: center; 
 min-height:300px;
 min-width:300px;
 max-height:600px;
-height:autp;
+height:auto;
 width:80%;
 margin:30px`,
-"content" : `<div id="header" 
+"content" : `<div id="main" style="width:100%; height:auto; border 1px solid red;">
+<div id="header" 
 style="background-color: #333; 
 cursor:move;
-padding:30px;
+padding:10px;
 color : #fff;
 width : 100%; 
 text-align: center; 
 margin: 0 auto; 
 max-width:100%;"
->Submit Metadata</div>`,
+>Submit Metadata</div>
+</div>`,
 }
  
 
@@ -125,14 +126,14 @@ function drag_over(event) {
 } 
 function drop(event) { 
     var offset = event.dataTransfer.getData("text/plain").split(',');
-    var dm = document.getElementById('header');
+    var dm = document.getElementById('submitmeta');
     dm.style.left = (event.clientX + parseInt(offset[0],10)) + 'px';
     dm.style.top = (event.clientY + parseInt(offset[1],10)) + 'px';
 event.preventDefault();
     return false;
 } 
 
-var dm = document.getElementById('header'); 
+var dm = document.getElementById('submitmeta'); 
 dm.addEventListener('dragstart',drag_start,false); 
 document.body.addEventListener('dragover',drag_over,false); 
 document.body.addEventListener('drop',drop,false);
