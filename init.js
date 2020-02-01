@@ -138,6 +138,54 @@ class SubmitForm extends React.Component {
  });
  
  
+ 
+ class HeaderBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { liked: false };
+  }
+  
+  render() {
+   
+   const headerStyle = {
+  color: '#fff',
+  backgroundColor: '#333',
+    cursor: 'move',
+    margin: '0 auto',
+    zIndex: '900',
+    padding: "10px",
+    textAlign: 'center',
+    width: "100%",
+    maxWidth: "100%"
+};
+   
+   
+    return e(
+    'div',
+       { 
+        style: headerStyle
+       },
+     `${this.props.headercontent}`
+    );
+  
+ 
+     
+   
+   
+   
+   
+   
+   
+  }//render
+ }//submitformclass
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  class CloseBtn extends React.Component {
   constructor(props) {
     super(props);
@@ -224,7 +272,11 @@ class LikeButton extends React.Component {
  
  
 //const domContainer = document.getElementById("testinit");
-ReactDOM.render(e(CloseBtn, {writethis: "X"}), header);
+ 
+ ReactDOM.render(e(CloseBtn, {headercontent: `<h2>Submit from React</h2>`}), header);
+ 
+ 
+//ReactDOM.render(e(CloseBtn, {writethis: "X"}), header);
   
   
   
