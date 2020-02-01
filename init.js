@@ -24,12 +24,11 @@ const PopupElement = {
  "styles" : `color:black;
 background-color: white;
 draggable : true;
+cursor:move;
 z-index:999;
 position:absolute;
 overflow-y:scroll;
 border: 4px solid #FFFFFF;
-margin: 20px;
-box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.3),0px 20px 10px 0px rgba(0, 0, 0, 0.6);
 resize: both;
 top:10px;
 left:10px;
@@ -44,7 +43,6 @@ margin:30px`,
 "content" : `<div id="main" style="width:100%; height:auto; border 1px solid red;">
 <div id="header" 
 style="background-color: #333; 
-cursor:move;
 padding:10px;
 color : #fff;
 width : 100%; 
@@ -55,9 +53,10 @@ max-width:100%;"
 </div>`,
 }
  
-
-
-
+/*
+margin: 20px;
+box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.3),0px 20px 10px 0px rgba(0, 0, 0, 0.6);
+*/
 
 
 
@@ -115,7 +114,11 @@ class SubmitForm extends React.Component {
  
  
  function drag_start(event) {
-  console.log(event.target.id);
+  //console.log(event.target.id);
+  if(!event.target.id || event.target.id !="submitmeta"){
+  console.log("wrong id, returning");
+   return;
+  }
     var style = window.getComputedStyle(event.target, null);
     event.dataTransfer.setData("text/plain",
     (parseInt(style.getPropertyValue("left"),10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"),10) - event.clientY));
