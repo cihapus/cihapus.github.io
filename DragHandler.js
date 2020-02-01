@@ -2,7 +2,7 @@
 
 function DragHandler (event, dragHandle, elem){
 
- console.log("draghandler -- "+event, dragHandle, elem);
+// console.log("draghandler -- "+event, dragHandle, elem);
 //disable default drag to prevent conflicts
  elem.ondragstart = function() {
   return false;
@@ -39,10 +39,11 @@ function DragHandler (event, dragHandle, elem){
 
   // (3) move the ball on mousemove
   document.addEventListener('mousemove', onMouseMove);
+ // document.addEventListener('mousemove', onMouseMove);
 
   // (4) drop the ball, remove unneeded handlers
   elem.onmouseup = function() {
-    elem.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mousemove', onMouseMove);
     elem.onmouseup = null;
   };
 
