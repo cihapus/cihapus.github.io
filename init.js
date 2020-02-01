@@ -65,12 +65,13 @@ const CloseButton = {
  "styles":`border:1px solid #efefef;
 color:#fff;
 font-size:2rem;
-background-color:#333;
+background-color:#555;
 position:absolute;
-top:10px;
+top:15px;
 right:30px;
 z-index:1000;
 padding:4px;
+line-height:1;
 border-radius:4px`,
  "content":"&#10006"
 }
