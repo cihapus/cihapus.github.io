@@ -105,16 +105,54 @@ class SubmitForm extends React.Component {
  }//submitformclass
  
  
- const domContainer = document.getElementById('submitmeta');
-//ReactDOM.render(e(SubmitForm), domContainer);
+ const popContainer = document.getElementById('submitmeta');
+//ReactDOM.render(e(SubmitForm), popContainer);
   
  
  
  
  
  
+ 
+ popContainer.onmousedown = function(event) { // (1) start the process
+
+  // (2) prepare to moving: make absolute and on top by z-index
+  //ball.style.position = 'absolute';
+  //ball.style.zIndex = 1000;
+  // move it out of any current parents directly into body
+  // to make it positioned relative to the body
+  //document.body.append(ball);
+  // ...and put that absolutely positioned ball under the pointer
+
+  moveAt(event.pageX, event.pageY);
+
+  // centers the ball at (pageX, pageY) coordinates
+  function moveAt(pageX, pageY) {
+    popContainer.style.left = pageX - popContainer.offsetWidth / 2 + 'px';
+    popContainer.style.top = pageY - popContainer.offsetHeight / 2 + 'px';
+  }
+
+  function onMouseMove(event) {
+    moveAt(event.pageX, event.pageY);
+  }
+
+  // (3) move the ball on mousemove
+  document.addEventListener('mousemove', onMouseMove);
+
+  // (4) drop the ball, remove unneeded handlers
+  popContainer.onmouseup = function() {
+    document.removeEventListener('mousemove', onMouseMove);
+    popContainer.onmouseup = null;
+  };
+
+};
+ 
+ 
+ 
+ 
+ 
+ /*
  function drag_start(event) {
-  //console.log(event.target.id);
   if(!event.target.id || event.target.id !="submitmeta"){
   console.log("wrong id, returning");
    return;
@@ -140,7 +178,7 @@ var dm = document.getElementById('submitmeta');
 dm.addEventListener('dragstart',drag_start,false); 
 document.body.addEventListener('dragover',drag_over,false); 
 document.body.addEventListener('drop',drop,false);
-
+*/
  
  
  
