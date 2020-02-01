@@ -144,7 +144,11 @@ class SubmitForm extends React.Component {
  
 //ReactDOM.render(e(SubmitForm), popContainer);
   
- DragHandler(dragHandle, popContainer);//draghandler, element to move
+ //DragHandler(dragHandle, popContainer);//draghandler, element to move
+ 
+ dragHandle.onmousedown = DragHandler(event, dragHandle, popContainer);
+ 
+ 
  
  
  /*
