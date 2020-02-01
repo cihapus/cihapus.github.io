@@ -8,13 +8,8 @@ import { DragHandler } from './DragHandler.js';
 
 
 function init(){
-
-console.log("logging from init");
  
-  const e = React.createElement;
- 
- 
- 
+const e = React.createElement;
  
  
 //the actual popup window, with a header element
@@ -53,11 +48,6 @@ max-width:100%;"
 </div>`,
 }
  
-/*
-margin: 20px;
-box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.3),0px 20px 10px 0px rgba(0, 0, 0, 0.6);
-*/
-
 
 
 const CloseButton = {
@@ -77,9 +67,6 @@ line-height:1;
 border-radius:4px`,
  "content":"&#10006"
 }
-
-
-
 
 
 
@@ -108,7 +95,7 @@ console.log("clicked-"+e.target.id);
  
  Make(SecondElement, "submitmeta");
  
- Make(CloseButton, "header");
+ /*Make(CloseButton, "header");
  const closeElement = document.getElementById('closebutton');
  if(!closeElement){
  console.warn("missing close button");
@@ -116,7 +103,7 @@ console.log("clicked-"+e.target.id);
  else{
  closeElement.addEventListener('click', handleCloseButton);
  }
-  
+  */
  
  
  
@@ -144,15 +131,6 @@ class SubmitForm extends React.Component {
  
 //ReactDOM.render(e(SubmitForm), popContainer);
   
- //DragHandler(dragHandle, popContainer);//draghandler, element to move
- 
- //dragHandle.onmousedown = DragHandler(event, dragHandle, popContainer);
- 
- 
- popContainer.ondragstart = function() {
-  return false;
-};
-
  
  
  dragHandle.addEventListener('mousedown', function(e){
@@ -160,66 +138,30 @@ class SubmitForm extends React.Component {
  });
  
  
- 
- 
- /*
- 
- PROBABLY NEED TO CHECK FOR MOUSEOVER ON HEADER ELEMENT RATHER THAN DOCUMENT/SUBMITMETA AND THEN MOVE SUBMITMETA RATHER THAN HEADER....
- 
- */
- 
- 
-
- /*
- popContainer.ondragstart = function() {
-  return false;
-};
- 
- dragHandle.onmousedown = function(event) { 
-
-   let shiftX = event.clientX - popContainer.getBoundingClientRect().left;
-  let shiftY = event.clientY - popContainer.getBoundingClientRect().top;
-
-  
-  
-  moveAt(event.pageX, event.pageY);
-
-  function moveAt(pageX, pageY) {
-    popContainer.style.left = pageX - shiftX + 'px';
-    popContainer.style.top = pageY - shiftY + 'px';
+ class CloseButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { clicked: false };
   }
 
-  function onMouseMove(event) {
-    moveAt(event.pageX, event.pageY);
+  
+ 
+  
+  render() {
+    if (this.state.liked) {
+     
+     console.log("you clicked button");
+     // return 'You liked this.';
+    }
+    
+   
+    return e(
+      'button',
+       { onClick: () => this.setState({ clicked: true }) },
+      'Like'
+    );
   }
-
-  document.addEventListener('mousemove', onMouseMove);
-
-  popContainer.onmouseup = function() {
-    document.removeEventListener('mousemove', onMouseMove);
-    popContainer.onmouseup = null;
-  };
-
-};
- 
- */
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+}
  
  
  
@@ -248,7 +190,7 @@ class LikeButton extends React.Component {
  
  
 //const domContainer = document.getElementById("testinit");
-//ReactDOM.render(e(LikeButton), domContainer);
+ReactDOM.render(e(CloseButton), header);
   
   
   
