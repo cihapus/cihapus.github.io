@@ -273,7 +273,7 @@ class LikeButton extends React.Component {
  
 //const domContainer = document.getElementById("testinit");
  
- ReactDOM.render(e(CloseBtn, {headercontent: `<h2>Submit from React</h2>`}), header);
+ ReactDOM.render(e(HeaderBar, {headercontent: `<h2>Submit from React</h2>`}), header);
  
  
 //ReactDOM.render(e(CloseBtn, {writethis: "X"}), header);
