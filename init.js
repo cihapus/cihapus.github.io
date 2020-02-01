@@ -117,6 +117,12 @@ class SubmitForm extends React.Component {
  
  popContainer.onmousedown = function(event) { // (1) start the process
 
+  
+  
+   let shiftX = event.clientX - popContainer.getBoundingClientRect().left;
+  let shiftY = event.clientY - popContainer.getBoundingClientRect().top;
+
+  
   // (2) prepare to moving: make absolute and on top by z-index
   //ball.style.position = 'absolute';
   //ball.style.zIndex = 1000;
@@ -135,8 +141,14 @@ class SubmitForm extends React.Component {
 
   // centers the ball at (pageX, pageY) coordinates
   function moveAt(pageX, pageY) {
-    popContainer.style.left = pageX - popContainer.offsetWidth / 2 + 'px';
-    popContainer.style.top = pageY - popContainer.offsetHeight / 2 + 'px';
+    //popContainer.style.left = pageX - popContainer.offsetWidth / 2 + 'px';
+    //popContainer.style.top = pageY - popContainer.offsetHeight / 2 + 'px';
+   
+   
+    popContainer.style.left = pageX - shiftX + 'px';
+    popContainer.style.top = pageY - shiftY + 'px';
+   
+   
   }
 
   function onMouseMove(event) {
