@@ -12,9 +12,9 @@ function DragHandler (dragHandle, elem){
  
  
  
+dragHandle.addEventListener('mousedown', function (event) {
 
-
-dragHandle.onmousedown = function(event) { // (1) start the process
+//dragHandle.onmousedown = function(event) { // (1) start the process
 
   
   
@@ -51,7 +51,7 @@ dragHandle.onmousedown = function(event) { // (1) start the process
     elem.onmouseup = null;
   };
 
-};
+});
  
  }//DragHandler
  
