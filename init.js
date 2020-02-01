@@ -62,15 +62,16 @@ box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.3),0px 20px 10px 0px rgba(0, 0, 0, 
 const CloseButton = {
 "type":"button",
  "id":"closebutton",
- "styles":`border:1px solid #fff;
+ "styles":`border:1px solid #efefef;
 color:#fff;
-background-color:#ddd;
+font-size:3rem;
+background-color:#333;
 position:absolute;
 top:10px;
 right:30px;
 z-index:1000;
 padding:10px;
-border-radius:50%`,
+border-radius:4px`,
  "content":"X"
 }
 
@@ -104,8 +105,13 @@ console.log("clicked-"+e.target.id);
  Make(SecondElement, "submitmeta");
  
  Make(CloseButton, "header");
- document.getElementById('closebutton').addEventHandler('click', handleCloseButton);
- 
+ const closeElement = document.getElementById('closebutton');
+ if(!closeElement){
+ console.warn("missing close button");
+ }
+ else{
+ closeElement.addEventListener('click', handleCloseButton);
+ }
   
  
  
