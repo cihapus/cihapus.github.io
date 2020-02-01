@@ -192,7 +192,7 @@ class SubmitForm extends React.Component {
         style: closeBtnStyle,
         onClick: () => this.setState({ clicked: true }) 
        },
-     'X'
+     ${this.props.writethis}
     );
   }
 }
@@ -224,7 +224,7 @@ class LikeButton extends React.Component {
  
  
 //const domContainer = document.getElementById("testinit");
-ReactDOM.render(e(CloseBtn), header);
+ReactDOM.render(e(CloseBtn, {writethis: "X"}), header);
   
   
   
