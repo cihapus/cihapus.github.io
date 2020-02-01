@@ -105,6 +105,9 @@ class SubmitForm extends React.Component {
  
  
  const popContainer = document.getElementById('submitmeta');
+ 
+ const dragHandle = document.getElementById('header');
+ 
 //ReactDOM.render(e(SubmitForm), popContainer);
   
  
@@ -122,7 +125,7 @@ class SubmitForm extends React.Component {
   return false;
 };
  
- popContainer.onmousedown = function(event) { // (1) start the process
+ dragHandle.onmousedown = function(event) { // (1) start the process
 
   
   
