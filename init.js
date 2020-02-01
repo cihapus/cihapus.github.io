@@ -193,7 +193,7 @@ class SubmitForm extends React.Component {
         style: closeBtnStyle,
         onClick: () => this.setState({ clicked: true }) 
        },
-      '&#10006'
+      `<p>&#10006</p>`
     );
   }
 }
