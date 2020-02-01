@@ -68,10 +68,10 @@ font-size:2rem;
 background-color:#444;
 position:absolute;
 margin:10px;
-top:30px;
-right:30px;
+top:20px;
+right:20px;
 z-index:1000;
-padding:4px;
+padding:10px;
 line-height:1;
 border-radius:4px`,
  "content":"&#10006"
