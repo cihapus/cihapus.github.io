@@ -28,7 +28,7 @@ cursor:move;
 z-index:999;
 position:absolute;
 overflow-y:scroll;
-border: 4px solid #FFFFFF;
+border: 4px solid rgba(0,0,0,0.3);
 resize: both;
 top:10px;
 left:10px;
@@ -39,7 +39,7 @@ min-width:300px;
 max-height:600px;
 height:auto;
 width:80%;
-margin:30px`,
+margin:20px`,
 "content" : `<div id="main" style="width:100%; height:auto; border 1px solid red;">
 <div id="header" 
 style="background-color: #333; 
