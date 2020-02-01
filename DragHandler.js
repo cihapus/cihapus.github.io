@@ -2,6 +2,7 @@
 
 function DragHandler (event, dragHandle, elem){
 
+ console.log("draghandler -- "+event, dragHandle, elem);
 //disable default drag to prevent conflicts
  elem.ondragstart = function() {
   return false;
