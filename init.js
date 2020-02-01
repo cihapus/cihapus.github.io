@@ -41,13 +41,14 @@ margin:20px`,
 "content" : `<div id="main" style="width:100%; height:auto; border 1px solid red;">
 <div id="header" 
 style="background-color: #333; 
+cursor:move;
 padding:10px;
 color : #fff;
 width : 100%; 
 text-align: center; 
 margin: 0 auto; 
 max-width:100%;"
-><h2>Submit Metadata</h2><p style="position:absolute; top:20px;left:20px;color:#ff0">DRAG</p></div>
+><p>Submit Metadata</p><p style="position:absolute; top:30px;left:30px;color:#ff0">&#10021</p></div>
 </div>`,
 }
  
