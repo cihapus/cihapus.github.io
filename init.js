@@ -173,7 +173,6 @@ class SubmitForm extends React.Component {
     borderRadius: "4px"
 };
    
-   const closeBtnContent = "X";
    
    
    
@@ -193,7 +192,7 @@ class SubmitForm extends React.Component {
         style: closeBtnStyle,
         onClick: () => this.setState({ clicked: true }) 
        },
-     {closeBtnContent}
+     'X'
     );
   }
 }
