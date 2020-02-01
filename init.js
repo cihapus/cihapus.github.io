@@ -47,7 +47,7 @@ width : 100%;
 text-align: center; 
 margin: 0 auto; 
 max-width:100%;"
-><h1>Submit Metadata</h1><p style="position:absolute; top:0;left:0;">*</p></div>
+><h2>Submit Metadata</h2><p style="position:absolute; top:20px;left:20px;color:#ff0">DRAG</p></div>
 </div>`,
 }
  
@@ -140,11 +140,11 @@ class SubmitForm extends React.Component {
   //document.body.append(ball);
   // ...and put that absolutely positioned ball under the pointer
   
-  var getX = event.pageX;
-  var getY = event.pageY;
+ // var getX = event.pageX;
+  //var getY = event.pageY;
   
- console.log(getX, getY);
-  console.log("offsetcontainerheight "+popContainer.offsetHeight);
+ //console.log(getX, getY);
+  //console.log("offsetcontainerheight "+popContainer.offsetHeight);
   
   moveAt(event.pageX, event.pageY);
 
