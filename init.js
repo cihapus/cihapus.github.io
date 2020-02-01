@@ -48,7 +48,7 @@ width : 100%;
 text-align: center; 
 margin: 0 auto; 
 max-width:100%;"
-><p>Submit Metadata</p><p style="position:absolute; top:15px;left:30px;color:#555;font-size:3rem;">&#10070</p></div>
+><p>Submit Metadata</p><p style="position:absolute; top:10px;left:30px;color:#555;font-size:3rem;">&#10070</p></div>
 </div>`,
 }
  
@@ -59,7 +59,20 @@ box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.3),0px 20px 10px 0px rgba(0, 0, 0, 
 
 
 
+const CloseButton = {
+"type":"button",
+ "id":"closebutton",
+ "styles":`border:0;
+color:#000;
+background-color:#fff;
+position:absolute;
+top:10px;
+right:10px;
+z-index:1000;
+padding:10px;`,
+ "content":"X"
 
+}
 
 
 
@@ -73,7 +86,7 @@ const SecondElement = {
  "styles" : `color:blue; 
 text-align: right; 
 margin:30px`,
-"content" : `<p>hello world from second element</p>`,
+"content" : `<p>hello world from second element</p>`
 }
 
 
@@ -85,6 +98,8 @@ margin:30px`,
  document.body.appendChild(testDiv);//could render this via react instead I guess?
  
  Make(SecondElement, "submitmeta");
+ 
+ Make(CloseButton, "header");
  
   
 class SubmitForm extends React.Component {
