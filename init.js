@@ -148,6 +148,26 @@ class SubmitForm extends React.Component {
  
   
   render() {
+   
+   
+   /*const closebtnstyle = `
+      color: white;
+      background-color: #000;
+      padding: 10px;
+    zIndex: 1000;
+    `;
+   */
+   
+   const closeBtnStyle = {
+  color: 'white',
+  backgroundColor: '#000',
+    padding: '10px',
+    zIndex: '1000'
+};
+   
+   
+   
+   
     if (this.state.liked) {
      
      console.log("you clicked button");
@@ -157,7 +177,10 @@ class SubmitForm extends React.Component {
    
     return e(
       'button',
-       { onClick: () => this.setState({ clicked: true }) },
+       { 
+        style: closeBtnStyle,
+        onClick: () => this.setState({ clicked: true }) 
+       },
       'Like'
     );
   }
