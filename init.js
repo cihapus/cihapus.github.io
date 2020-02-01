@@ -48,7 +48,7 @@ width : 100%;
 text-align: center; 
 margin: 0 auto; 
 max-width:100%;"
-><p>Submit Metadata</p><p style="position:absolute; top:10px;left:10px;color:#555;font-size:3rem;">&#10021</p></div>
+><p>Submit Metadata</p><p style="position:absolute; top:15px;left:30px;color:#555;font-size:3rem;">&#10070</p></div>
 </div>`,
 }
  
