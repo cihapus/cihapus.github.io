@@ -62,16 +62,16 @@ box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.3),0px 20px 10px 0px rgba(0, 0, 0, 
 const CloseButton = {
 "type":"button",
  "id":"closebutton",
- "styles":`border:0;
-color:#000;
-background-color:#fff;
+ "styles":`border:1px solid #fff;
+color:#fff;
+background-color:#ddd;
 position:absolute;
 top:10px;
-right:10px;
+right:30px;
 z-index:1000;
-padding:10px;`,
+padding:10px;
+border-radius:50%`,
  "content":"X"
-
 }
 
 
@@ -93,15 +93,24 @@ margin:30px`,
 
 
 
- 
+function handleCloseButton(e){
+console.log("clicked-"+e.target.id);
+} 
+
+
  var testDiv = Make(PopupElement, null);
  document.body.appendChild(testDiv);//could render this via react instead I guess?
  
  Make(SecondElement, "submitmeta");
  
  Make(CloseButton, "header");
+ document.getElementById('closebutton').addEventHandler('click', handleCloseButton);
  
   
+ 
+ 
+ 
+ 
 class SubmitForm extends React.Component {
   constructor(props) {
     super(props);
