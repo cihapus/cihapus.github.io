@@ -67,6 +67,7 @@ color:#fff;
 font-size:2rem;
 background-color:#444;
 position:absolute;
+margin:10px;
 top:30px;
 right:30px;
 z-index:1000;
