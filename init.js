@@ -62,14 +62,14 @@ box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.3),0px 20px 10px 0px rgba(0, 0, 0, 
 const CloseButton = {
 "type":"button",
  "id":"closebutton",
- "styles":`border:1px solid #efefef;
+ "styles":`border:1px solid #eee;
 color:#fff;
-font-size:2rem;
+font-size:1.8rem;
 background-color:#444;
 position:absolute;
 margin:10px;
-top:20px;
-right:20px;
+top:18px;
+right:10px;
 z-index:1000;
 padding:10px;
 line-height:1;
