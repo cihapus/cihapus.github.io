@@ -1,6 +1,6 @@
 
 
-function DragHandler (dragHandle, elem){
+function DragHandler (event, dragHandle, elem){
 
 // console.log("draghandler -- "+event, dragHandle, elem);
 //disable default drag to prevent conflicts
@@ -12,7 +12,7 @@ function DragHandler (dragHandle, elem){
  
  
  
-dragHandle.addEventListener('mousedown', function (event) {
+
 
 //dragHandle.onmousedown = function(event) { // (1) start the process
 
@@ -51,7 +51,7 @@ dragHandle.addEventListener('mousedown', function (event) {
     elem.onmouseup = null;
   };
 
-});
+//};
  
  }//DragHandler
  
