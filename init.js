@@ -23,7 +23,6 @@ const PopupElement = {
  //"class" : "testclass",
  "styles" : `color:black;
 background-color: white;
-draggable : true;
 cursor:move;
 z-index:999;
 position:absolute;
@@ -111,8 +110,10 @@ class SubmitForm extends React.Component {
  
  
  
- 
- 
+ //disable native drag/drop
+ popContainer.ondragstart = function() {
+  return false;
+};
  
  popContainer.onmousedown = function(event) { // (1) start the process
 
@@ -123,7 +124,17 @@ class SubmitForm extends React.Component {
   // to make it positioned relative to the body
   //document.body.append(ball);
   // ...and put that absolutely positioned ball under the pointer
-
+  
+  var getX = event.pageX;
+  var getY = event.pageY;
+  
+  if(getY > popContainer.offsetHeight /2){
+  console.log("High?");
+  }
+  else{
+  console.log("Low?");
+  }
+  
   moveAt(event.pageX, event.pageY);
 
   // centers the ball at (pageX, pageY) coordinates
