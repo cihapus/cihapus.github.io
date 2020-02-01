@@ -72,7 +72,7 @@ right:30px;
 z-index:1000;
 padding:4px;
 border-radius:4px`,
- "content":&#10006"
+ "content":"&#10006"
 }
 
 
