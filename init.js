@@ -68,7 +68,7 @@ font-size:1.5rem;
 background-color:#444;
 position:absolute;
 margin:10px;
-top:12px;
+top:16px;
 right:20px;
 z-index:1000;
 padding:10px;
