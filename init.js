@@ -64,15 +64,15 @@ const CloseButton = {
  "id":"closebutton",
  "styles":`border:1px solid #efefef;
 color:#fff;
-font-size:3rem;
+font-size:2rem;
 background-color:#333;
 position:absolute;
 top:10px;
 right:30px;
 z-index:1000;
-padding:10px;
+padding:4px;
 border-radius:4px`,
- "content":"<p>&#10060</p>"
+ "content":&#10006"
 }
 
 
