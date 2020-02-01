@@ -128,12 +128,8 @@ class SubmitForm extends React.Component {
   var getX = event.pageX;
   var getY = event.pageY;
   
-  if(getY > popContainer.offsetHeight /2){
-  console.log("High?");
-  }
-  else{
-  console.log("Low?");
-  }
+ console.log(getX, getY);
+  console.log("offsetcontainerheight "+popContainer.offsetHeight);
   
   moveAt(event.pageX, event.pageY);
 
