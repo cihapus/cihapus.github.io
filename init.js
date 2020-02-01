@@ -138,7 +138,7 @@ class SubmitForm extends React.Component {
  });
  
  
- class CloseButton extends React.Component {
+ class CloseBtn extends React.Component {
   constructor(props) {
     super(props);
     this.state = { clicked: false };
@@ -190,7 +190,7 @@ class LikeButton extends React.Component {
  
  
 //const domContainer = document.getElementById("testinit");
-ReactDOM.render(e(CloseButton), header);
+ReactDOM.render(e(CloseBtn), header);
   
   
   
