@@ -98,6 +98,7 @@ margin:30px`,
 
 
 function handleCloseButton(e){
+ e.preventDefault();
 console.log("clicked-"+e.target.id);
 } 
 
