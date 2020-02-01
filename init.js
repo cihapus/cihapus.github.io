@@ -65,9 +65,9 @@ const CloseButton = {
  "styles":`border:1px solid #efefef;
 color:#fff;
 font-size:2rem;
-background-color:#555;
+background-color:#444;
 position:absolute;
-top:15px;
+top:30px;
 right:30px;
 z-index:1000;
 padding:4px;
