@@ -110,6 +110,13 @@ class SubmitForm extends React.Component {
  
  
  
+ /*
+ 
+ PROBABLY NEED TO CHECK FOR MOUSEOVER ON HEADER ELEMENT RATHER THAN DOCUMENT/SUBMITMETA AND THEN MOVE SUBMITMETA RATHER THAN HEADER....
+ 
+ */
+ 
+ 
  //disable native drag/drop
  popContainer.ondragstart = function() {
   return false;
