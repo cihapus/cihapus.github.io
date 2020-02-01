@@ -148,6 +148,13 @@ class SubmitForm extends React.Component {
  
  //dragHandle.onmousedown = DragHandler(event, dragHandle, popContainer);
  
+ 
+ popContainer.ondragstart = function() {
+  return false;
+};
+
+ 
+ 
  dragHandle.addEventListener('mousedown', function(e){
   DragHandler(e, dragHandle, popContainer)
  });
