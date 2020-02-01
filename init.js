@@ -23,7 +23,6 @@ const PopupElement = {
  //"class" : "testclass",
  "styles" : `color:black;
 background-color: white;
-cursor:move;
 z-index:999;
 position:absolute;
 overflow-y:scroll;
@@ -48,7 +47,7 @@ width : 100%;
 text-align: center; 
 margin: 0 auto; 
 max-width:100%;"
->Submit Metadata</div>
+><h1>Submit Metadata</h1><p style="position:absolute; top:0;left:0;">*</p></div>
 </div>`,
 }
  
