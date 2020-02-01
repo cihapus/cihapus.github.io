@@ -37,7 +37,7 @@ min-width:300px;
 max-height:600px;
 height:auto;
 width:80%;
-margin:20px`,
+margin:10px`,
 "content" : `<div id="main" style="width:100%; height:auto; border 1px solid red;">
 <div id="header" 
 style="background-color: #333; 
@@ -48,7 +48,7 @@ width : 100%;
 text-align: center; 
 margin: 0 auto; 
 max-width:100%;"
-><p>Submit Metadata</p><p style="position:absolute; top:30px;left:30px;color:#ff0">&#10021</p></div>
+><p>Submit Metadata</p><p style="position:absolute; top:50px;left:50px;color:#e4e4e4;font-size:6rem;">&#10021</p></div>
 </div>`,
 }
  
